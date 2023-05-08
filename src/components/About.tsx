@@ -31,11 +31,11 @@ export default function About({}: Props) {
             Tech Journey
           </h2>
           <p>
-            I'm Pedro Henrique Marques, 23yo. I live in the South of Brazil, in
-            a state called Santa Catarina. I work in the technology field since
+            Im Pedro Henrique Marques, 23yo. I live in the South of Brazil, in a
+            state called Santa Catarina. I work in the technology field since
             2019, starting as user support, having more contact with databases,
             and later as support for networks and digital security. Since the
-            beginning of 2021, I've been working with programming and had
+            beginning of 2021, Ive been working with programming and had
             experiences with JavaScript, TypeScript, ReactJS, NodeJS, Git, HTML,
             CSS, React Native, Vue, PHP, Symfony, GraphQL, Redux, and other
             technologies and tools in the industry.

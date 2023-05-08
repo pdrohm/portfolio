@@ -30,13 +30,6 @@ export default function Banner({}: Props) {
       id="banner"
       className="h-screen relative flex flex-col space-y-8 items-center justify-center text-center overflow-hidden snap-start"
     >
-      <button
-        onClick={() => (theme == "dark" ? setTheme("light") : setTheme("dark"))}
-        className="bg-gray-800 dark:bg-gray-50 hover:bg-gray-600 dark:hover:bg-gray-300 transition-all duration-100 text-white dark:text-gray-800 px-8 py-2 text-2xl md:text-4xl rounded-lg absolute bottom-32 z-30"
-      >
-        Toggle Mode
-      </button>
-
       <Image
         className="relative rounded-full mx-auto object-cover lg:w-72 lg:h-72 md:w-64 md:h-64 w-56 h-56"
         src="https://media.licdn.com/dms/image/C4E03AQGKgOnvNAB2bw/profile-displayphoto-shrink_800_800/0/1663100488547?e=1687996800&v=beta&t=Dxnait8Z9vLjGtHdVBPfYuZdL_ug8yr0Ek15GHtRaWY"

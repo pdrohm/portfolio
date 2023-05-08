@@ -17,7 +17,7 @@ export default function Project({ index, project }: Props) {
       <div className="space-y-10 px-0 md:px-10 max-w-6xl">
         <h3 className="xl:text-3xl text-xl text-center">
           <span className="underline decoration-blue xl:text-4xl text-2xl">
-            Case of Study {parseInt(index) + 1} of 3:
+            Case of Study {index + 1} of 3:
           </span>{" "}
           TESTE 1
         </h3>
