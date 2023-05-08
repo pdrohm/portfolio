@@ -2,26 +2,30 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+
+@layer base{
+  body {
+      @apply dark:bg-gray-800 bg-white
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+@layer components {
+
+  .banner-btn {
+    @apply px-6 py-2 border-[#242424] rounded-full text-sm uppercase tracking-widest text-zinc-500 transition-all hover:border-[#0d80bf]/30 hover:text-[#0d80bf]/30
+  }
+
+  .title-section {
+    @apply absolute top-14 text-xl uppercase text-zinc-500 tracking-[15px]
+  }
+
+  .img-techs {
+    @apply h-10 w-10 rounded-full
+  }
+
+  .contact-input {
+    @apply outline-none bg-zinc-300/10 rounded-md border-b px-6 py-4 border-zinc-400 text-gray-500 placeholder-gray-500 transition-all focus:border-zinc-100/80 focus:text-gray-300 hover:bg-zinc-300/20 
+  }
+
 }
