@@ -4,6 +4,7 @@ const nextConfig = {
   images: {
     domains: ["media.licdn.com", "localhost", "licdn.com"],
   },
+  output: "export",
 };
 
 module.exports = nextConfig;
