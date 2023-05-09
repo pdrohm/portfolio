@@ -18,9 +18,10 @@ export default function Skills({}: Props) {
       <h3 className="title-section top-40 lg:top-20 md:top-20">skills</h3>
 
       <div className="grid grid-cols-4 gap-5">
-        {techsIcon.map((tech) => (
-          <SkillTag key={tech.name} tech={tech} left={true} />
-        ))}
+        {techsIcon.map(
+          (tech) =>
+            tech.show && <SkillTag key={tech.name} tech={tech} left={true} />
+        )}
       </div>
     </motion.div>
   );

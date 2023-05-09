@@ -24,13 +24,13 @@ export default function Contact({}: Props) {
       className="h-screen flex relative flex-col text-center md:text-left items-center md:flex-row max-w-7xl px-10 mx-auto justify-evenly"
     >
       <h2 className="title-section absolute top-24">Contact</h2>
-      <div className="flex flex-col space-y-8">
+      <div className="flex flex-col space-y-8 items-center">
         <motion.h3
           initial={{ opacity: 0, y: -250 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 2 }}
           viewport={{ once: true }}
-          className="text-3xl text-center"
+          className="xl:text-3xl md:text-3xl text-xl text-center"
         >
           <span className="font-semibold">Interested?</span> Feel free to{" "}
           <span className=" font-semibold underline decoration-blue ">
@@ -46,15 +46,19 @@ export default function Contact({}: Props) {
         >
           <div className="flex items-center justify-center space-x-4">
             <EnvelopeIcon className="text-blue h-8 w-8 animate-pulse" />
-            <p className="text-2xl">opedrohenriquemarques@gmail.com</p>
+            <p className="xl:text-2xl md:text-2xl text-lg">
+              opedrohenriquemarques@gmail.com
+            </p>
           </div>
           <div className="flex items-center justify-center space-x-4">
             <PhoneIcon className="text-blue h-8 w-8 animate-pulse" />
-            <p className="text-2xl">+5548991500793</p>
+            <p className="xl:text-2xl md:text-2xl text-lg">+5548991500793</p>
           </div>
           <div className="flex items-center justify-center space-x-4">
             <MapPinIcon className="text-blue h-8 w-8 animate-pulse" />
-            <p className="text-2xl">Tubarão, SC. Brazil.</p>
+            <p className="xl:text-2xl md:text-2xl text-lg">
+              Tubarão, SC. Brazil.
+            </p>
           </div>
         </motion.div>
 
@@ -66,16 +70,16 @@ export default function Contact({}: Props) {
           onSubmit={handleSubmit(onSubmit)}
           className="flex flex-col space-y-3 w-fit mx-auto"
         >
-          <div className="flex space-x-3">
+          <div className="flex space-x-3 ">
             <input
               {...register("name")}
-              className="contact-input"
+              className="contact-input xl:w-auto md:w-auto w-1/2"
               type="text"
               placeholder="Name"
             />
             <input
               {...register("email")}
-              className="contact-input"
+              className="contact-input xl:w-auto md:w-auto w-1/2"
               type="email"
               placeholder="Email"
             />

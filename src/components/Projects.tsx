@@ -19,6 +19,18 @@ export default function Projects({}: Props) {
         "Phflix is a web application that is designed to resemble Netflix's interface, built using React and powered by the TMDB API. With Phflix, users can browse movies and TV shows, search for specific titles, and view detailed information about each title, including ratings, descriptions, and cast members. The application also features a responsive design, making it easy to use on a variety of devices. By fetching data from the TMDB API, Phflix is able to provide users with access to a vast library of movie and TV show content, making it a great choice for anyone looking for a Netflix-like experience.",
       mockupArt: "./phflix.png",
     },
+    {
+      title: "TESTE 2",
+      description:
+        "Phflix is a web application that is designed to resemble Netflix's interface, built using React and powered by the TMDB API. With Phflix, users can browse movies and TV shows, search for specific titles, and view detailed information about each title, including ratings, descriptions, and cast members. The application also features a responsive design, making it easy to use on a variety of devices. By fetching data from the TMDB API, Phflix is able to provide users with access to a vast library of movie and TV show content, making it a great choice for anyone looking for a Netflix-like experience.",
+      mockupArt: "./phflix.png",
+    },
+    {
+      title: "TESTE 3",
+      description:
+        "Phflix is a web application that is designed to resemble Netflix's interface, built using React and powered by the TMDB API. With Phflix, users can browse movies and TV shows, search for specific titles, and view detailed information about each title, including ratings, descriptions, and cast members. The application also features a responsive design, making it easy to use on a variety of devices. By fetching data from the TMDB API, Phflix is able to provide users with access to a vast library of movie and TV show content, making it a great choice for anyone looking for a Netflix-like experience.",
+      mockupArt: "./phflix.png",
+    },
   ];
 
   return (

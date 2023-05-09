@@ -19,6 +19,10 @@
   .logo-socials {
     @apply w-7 h-7 bg-transparent text-zinc-500 hover:bg-zinc-50 rounded-lg
   }
+
+  .container-socials {
+    @apply xl:mb-0 md:mb-0 mb-1 xl:mr-2 md:mr-2
+  }
   .title-section {
     @apply absolute top-14 text-xl uppercase text-zinc-500 tracking-[15px]
   }
@@ -30,5 +34,7 @@
   .contact-input {
     @apply outline-none bg-zinc-300/10 rounded-md border-b px-6 py-4 border-zinc-400 text-gray-500 placeholder-gray-500 transition-all focus:border-zinc-100/80 focus:text-gray-300 hover:bg-zinc-300/20 
   }
+
+  
 
 }

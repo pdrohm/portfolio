@@ -13,7 +13,7 @@ export default function About({}: Props) {
       id="about"
       className="flex relative flex-col items-center justify-evenly h-screen"
     >
-      <div>
+      <div className="flex justify-center items-center">
         <h2 className="title-section">ABOUT</h2>
       </div>
       <div className="flex flex-col  relative  text-center md:text-left md:flex-row max-w-6xl px-11 justify-evenly mx-auto items-center">

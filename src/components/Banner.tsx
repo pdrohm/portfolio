@@ -1,9 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
-import React, { useEffect, useState } from "react";
-import { Cursor, Typewriter, useTypewriter } from "react-simple-typewriter";
-import { SocialIcon } from "react-social-icons";
-import { useTheme } from "next-themes";
+import React from "react";
+import { Cursor, useTypewriter } from "react-simple-typewriter";
 import { FaGithub, FaInstagram, FaLinkedin, FaWhatsapp } from "react-icons/fa";
 
 type Props = {};
@@ -19,12 +17,6 @@ export default function Banner({}: Props) {
     loop: true,
     delaySpeed: 2200,
   });
-
-  const { systemTheme, theme, setTheme } = useTheme();
-  const currentTheme = theme === "system" ? systemTheme : theme;
-
-  console.log("systemTheme", systemTheme);
-  console.log("theme", theme);
 
   return (
     <div
