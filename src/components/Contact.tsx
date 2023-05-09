@@ -21,7 +21,7 @@ export default function Contact({}: Props) {
   return (
     <div
       id="contact"
-      className="h-screen snap-center flex relative flex-col text-center md:text-left items-center md:flex-row max-w-7xl px-10 mx-auto justify-evenly"
+      className="h-screen flex relative flex-col text-center md:text-left items-center md:flex-row max-w-7xl px-10 mx-auto justify-evenly"
     >
       <h2 className="title-section absolute top-24">Contact</h2>
       <div className="flex flex-col space-y-8">

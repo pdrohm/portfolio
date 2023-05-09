@@ -29,7 +29,7 @@ export default function Banner({}: Props) {
   return (
     <div
       id="banner"
-      className="h-screen relative flex flex-col space-y-8 items-center justify-center text-center overflow-hidden snap-start"
+      className="h-screen relative flex flex-col space-y-8 items-center justify-center text-center overflow-hidden"
     >
       <div className="bg-zinc-700/20  xl:w-14 xl:h-64 md:w-14 md:h-64 absolute xl:left-0 md:left-0 xl:top-96 bottom-10 h-14 w-64 flex xl:flex-col md:flex-col items-center justify-evenly xl:rounded-r-md md:rounded-r-md rounded-md xl:rounded-l-none md:rounded-l-none">
         <a href="https://www.linkedin.com/in/pdrohm/" target="_blank">

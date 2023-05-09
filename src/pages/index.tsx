@@ -8,7 +8,7 @@ import Contact from "../components/Contact";
 
 export default function Home() {
   return (
-    <div className="bg-[rgb(36,36,36)] text-zinc-200 h-screen snap-y snap-mandatory overflow-y-scroll overflow-x-hidden scrollbar scrollbar-track-zinc-700/20 scrollbar-thumb-zinc-700/90 z-0  ">
+    <div className="bg-[rgb(36,36,36)] text-zinc-200 h-screen overflow-y-scroll overflow-x-hidden scrollbar scrollbar-track-zinc-700/20 scrollbar-thumb-zinc-700/90 z-0  ">
       <Header />
       <Banner />
       <About />

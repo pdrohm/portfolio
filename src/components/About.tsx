@@ -11,7 +11,7 @@ export default function About({}: Props) {
       whileInView={{ opacity: 1 }}
       transition={{ duration: 2 }}
       id="about"
-      className="flex relative flex-col items-center justify-evenly h-screen snap-center "
+      className="flex relative flex-col items-center justify-evenly h-screen"
     >
       <div>
         <h2 className="title-section">ABOUT</h2>
