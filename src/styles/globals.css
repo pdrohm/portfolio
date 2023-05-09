@@ -15,7 +15,10 @@
   .banner-btn {
     @apply px-6 py-2 border-[#242424] rounded-full text-sm uppercase tracking-widest text-zinc-500 transition-all hover:border-[#0d80bf]/30 hover:text-[#0d80bf]/30
   }
-
+  
+  .logo-socials {
+    @apply w-7 h-7 bg-transparent text-zinc-500 hover:bg-zinc-50 rounded-lg
+  }
   .title-section {
     @apply absolute top-14 text-xl uppercase text-zinc-500 tracking-[15px]
   }

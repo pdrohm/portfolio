@@ -23,26 +23,14 @@ export default function Header({}: Props) {
         }}
         transition={{ duration: 1.6 }}
       >
-        <SocialIcon
-          className="mx-5"
-          url="https://linkedin.com/in/pdrohm"
-          target="_blank"
-          rel="noopener noreferrer"
-        />
-        <SocialIcon
-          className="mx-5"
-          url="https://github.com/pdr0hm"
-          bgColor="white"
-          fgColor="black"
-          target="_blank"
-          rel="noopener noreferrer"
-        />
-        <SocialIcon
-          className="mx-5"
-          url="https://instagram.com/pdrohm"
-          target="_blank"
-          rel="noopener noreferrer"
-        />
+        <Link href="#banner">
+          <div
+            className="cursor-pointer 
+   text-gray-400 hover:text-gray-400/75"
+          >
+            <HomeIcon className=" h-6 w-6" />
+          </div>
+        </Link>
       </motion.div>
       <motion.div
         className="flex flex-row items-center text-gray-300 cursor-pointer"
