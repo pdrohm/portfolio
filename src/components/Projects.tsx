@@ -35,7 +35,7 @@ export default function Projects({}: Props) {
       <h2 className="title-section ">Projects</h2>
       <div className="relative w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20 scrollbar scrollbar-track-zinc-700/20 scrollbar-thumb-blue/90 ">
         {projs.map((project, index) => (
-          <Project key={index} index={index} project={project} />
+          <Project key={index} index={index} project={project} length={projs.length} />
         ))}
       </div>
 

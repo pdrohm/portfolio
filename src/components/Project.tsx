@@ -4,9 +4,10 @@ import { project } from "./Projects";
 type Props = {
   index: number;
   project: project;
+  length: number;
 };
 
-export default function Project({ index, project }: Props) {
+export default function Project({ index, project, length }: Props) {
   return (
     <div className="w-screen flex-shrink-0 flex flex-col space-y-5 items-center justify-start h-scren p-15 md:p-40 ">
       <img className="xl:w-1/2 md:w-1/2 w-auto h-auto" src={project.mockupArt} alt="" />
@@ -15,7 +16,7 @@ export default function Project({ index, project }: Props) {
        
         <h3 className="xl:text-3xl text-xl text-center flex xl:flex-row md:flex-row flex-col items-center justify-center">
           <span className="underline decoration-blue xl:text-4xl text-2xl xl:mr-5 md:mr-3">
-            Case of Study {index + 1} of 3:
+            Case of Study {index + 1} of {length}:
           </span>{" "}
           {project.title}
         </h3>
