@@ -31,7 +31,7 @@ export default function Footer({}: Props) {
               <FaLinkedin className="logo-socials hover:text-[#0D62BC]" />
             </a>
             <a
-              href="https://github.com/pdr0hm"
+              href="https://github.com/pdrohm"
               target="_blank"
               className="container-socials"
             >

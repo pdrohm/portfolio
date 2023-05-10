@@ -27,7 +27,7 @@ export default function Banner({}: Props) {
         <a href="https://www.linkedin.com/in/pdrohm/" target="_blank">
           <FaLinkedin className="logo-socials hover:text-[#0D62BC]" />
         </a>
-        <a href="https://github.com/pdr0hm" target="_blank">
+        <a href="https://github.com/pdrohm" target="_blank">
           <FaGithub className="logo-socials hover:text-black" />
         </a>
         <a href="https://www.instagram.com/pdrohm/" target="_blank">
