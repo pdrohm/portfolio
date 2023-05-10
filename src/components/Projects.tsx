@@ -20,10 +20,9 @@ export default function Projects({}: Props) {
       mockupArt: "./phflix.png",
     },
     {
-      title: "TESTE 2",
-      description:
-        "Phflix is a web application that is designed to resemble Netflix's interface, built using React and powered by the TMDB API. With Phflix, users can browse movies and TV shows, search for specific titles, and view detailed information about each title, including ratings, descriptions, and cast members. The application also features a responsive design, making it easy to use on a variety of devices. By fetching data from the TMDB API, Phflix is able to provide users with access to a vast library of movie and TV show content, making it a great choice for anyone looking for a Netflix-like experience.",
-      mockupArt: "./phflix.png",
+      title: "Apollo - Soluções em Dados Solares",
+      description:"This website  was developed to a company called Apollo. It was built with React, TailwindCSS and Vite. The company has a product that will revolutioanize the way the Brazilians solar companies measure, control and store solar data, providing a better decision making ."  ,
+       mockupArt: "./apollo.png",
     },
     {
       title: "TESTE 3",
