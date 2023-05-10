@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@heroicons/react": "^2.0.17",
+    "@netlify/plugin-nextjs": "^4.36.1",
     "@react-hook/window-size": "^3.1.1",
     "@types/node": "18.16.0",
     "@types/react": "18.2.0",
