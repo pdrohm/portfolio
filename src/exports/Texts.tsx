@@ -134,6 +134,10 @@ export const FooterText = {
     br: "Como Desenvolvedor Fullstack com foco em Frontend, construo interfaces de usuário modernas e eficazes que contribuem para o sucesso de websites e aplicações web.",
     en: "As a Fullstack Developer with a Frontend focus, I build engaging and effective user interfaces that help the success of Websites and Web Applications.",
   },
+  socials: {
+    br: "Redes Sociais",
+    en: "Socials",
+  },
   madeBy: {
     br: "Feito com React, Next.js e TailwindCSS por ",
     en: " Made with React, Next.js and TailwindCSS by ",

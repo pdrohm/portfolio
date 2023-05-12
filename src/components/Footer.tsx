@@ -22,7 +22,7 @@ export default function Footer({}: Props) {
 
         <div className="flex flex-col items-center xl:items-start md:items-start">
           <h3 className="xl:text-2xl md:text-2xl text-lg xl:mb-8 md:mb-8 mb-8 uppercase h-5">
-            Socials
+            {isEngActive ? FooterText.socials.en : FooterText.socials.br}
           </h3>
           <div className="flex flex-row justify-start xl:mb-0 md:mb-0 mb-5 ">
             <a
