@@ -14,7 +14,7 @@ export const BannerText = {
     br: [
       "Olá! Sou o PH.",
       "Desenvolvedor Web.",
-      "Desevolvedor Mobile.",
+      "Desenvolvedor Mobile.",
       "Brasileiro, 23 anos.",
     ],
     en: [
