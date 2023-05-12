@@ -1,9 +1,13 @@
+import { FooterText } from "@/exports/Texts";
 import React from "react";
 import { FaGithub, FaInstagram, FaLinkedin, FaWhatsapp } from "react-icons/fa";
+import { useLanguage } from "../context/LanguageProvider";
 
 type Props = {};
 
 export default function Footer({}: Props) {
+  const { isEngActive } = useLanguage();
+
   return (
     <div className="flex bg-zinc-300 text-zinc-900 h-auto flex-col  ">
       <div className="flex xl:flex-row md:flex-row flex-col border-b-[1px] items-center justify-between mx-auto border-zinc-800 mb-10 xl:w-2/3 md:2/3">
@@ -12,9 +16,7 @@ export default function Footer({}: Props) {
             Pedro H. Marques
           </h3>
           <p className="h-5  xl:text-md md:text-md text-sm w-96">
-            As a Fullstack Developer with a Frontend focus, I build engaging and
-            effective user interfaces that help the success of Websites and Web
-            Applications.{" "}
+            {isEngActive ? FooterText.paragraph.en : FooterText.paragraph.br}
           </p>
         </div>
 
@@ -56,7 +58,7 @@ export default function Footer({}: Props) {
       </div>
       <div className="flex justify-center items-center h-10">
         <p className="text-[11px]">
-          Made with React, Next.js and TailwindCSS by{" "}
+          {isEngActive ? FooterText.madeBy.en : FooterText.madeBy.br}
           <span className="underline">
             <a href="#banner">Pedro H. Marques.</a>
           </span>
