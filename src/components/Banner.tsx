@@ -3,17 +3,16 @@ import Link from "next/link";
 import React from "react";
 import { Cursor, useTypewriter } from "react-simple-typewriter";
 import { FaGithub, FaInstagram, FaLinkedin, FaWhatsapp } from "react-icons/fa";
+import { useLanguage } from "../context/LanguageProvider";
+import { BannerText } from "@/exports/Texts";
 
 type Props = {};
 
 export default function Banner({}: Props) {
+  const { isEngActive } = useLanguage();
+
   const [text, count] = useTypewriter({
-    words: [
-      "Hello! I'm PH.",
-      "Web Developer.",
-      "Mobile Developer.",
-      "Brazilian, 23 yo.",
-    ],
+    words: isEngActive ? BannerText.wordsWriter.en : BannerText.wordsWriter.br,
     loop: true,
     delaySpeed: 2200,
   });
@@ -44,7 +43,7 @@ export default function Banner({}: Props) {
       />
       <div>
         <h2 className="text-sm xl:text-lg uppercase text-zinc-500 pb-2 tracking-[15px]">
-          Software Developer
+          {isEngActive ? BannerText.role.en : BannerText.role.br}
         </h2>
         <h2 className="text-3xl lg:text-5xl scroll-px-10">
           <span className="mr-4">{text}</span>
@@ -52,19 +51,36 @@ export default function Banner({}: Props) {
         </h2>
         <div className="pt-6">
           <Link href="#about">
-            <button className="banner-btn">About</button>
+            <button className="banner-btn">
+              {" "}
+              {isEngActive
+                ? BannerText.tabs.about.en
+                : BannerText.tabs.about.br}
+            </button>
           </Link>
 
           <Link href="#experience">
-            <button className="banner-btn">Experience</button>
+            <button className="banner-btn">
+              {isEngActive
+                ? BannerText.tabs.experience.en
+                : BannerText.tabs.experience.br}
+            </button>
           </Link>
 
           <Link href="#skills">
-            <button className="banner-btn">Skills</button>
+            <button className="banner-btn">
+              {isEngActive
+                ? BannerText.tabs.skills.en
+                : BannerText.tabs.skills.br}
+            </button>
           </Link>
 
           <Link href="#projects">
-            <button className="banner-btn">Projects</button>
+            <button className="banner-btn">
+              {isEngActive
+                ? BannerText.tabs.projects.en
+                : BannerText.tabs.projects.br}
+            </button>
           </Link>
         </div>
       </div>

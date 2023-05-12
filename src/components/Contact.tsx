@@ -2,6 +2,8 @@ import React from "react";
 import { PhoneIcon, MapPinIcon, EnvelopeIcon } from "@heroicons/react/24/solid";
 import { useForm, SubmitHandler } from "react-hook-form";
 import { motion } from "framer-motion";
+import { useLanguage } from "../context/LanguageProvider";
+import { ContactText } from "../exports/Texts";
 
 type Props = {};
 
@@ -13,6 +15,8 @@ type Inputs = {
 };
 
 export default function Contact({}: Props) {
+  const { isEngActive } = useLanguage();
+
   const { register, handleSubmit } = useForm<Inputs>();
 
   const onSubmit: SubmitHandler<Inputs> = (data) => {
@@ -23,7 +27,10 @@ export default function Contact({}: Props) {
       id="contact"
       className="h-screen flex relative flex-col text-center md:text-left items-center md:flex-row max-w-7xl px-10 mx-auto justify-evenly"
     >
-      <h2 className="title-section absolute top-24">Contact</h2>
+      <h2 className="title-section absolute top-24">
+        {" "}
+        {isEngActive ? ContactText.mainTitle.en : ContactText.mainTitle.br}
+      </h2>
       <div className="flex flex-col space-y-8 items-center">
         <motion.h3
           initial={{ opacity: 0, y: -250 }}
@@ -32,9 +39,15 @@ export default function Contact({}: Props) {
           viewport={{ once: true }}
           className="xl:text-3xl md:text-3xl text-xl text-center"
         >
-          <span className="font-semibold">Interested?</span> Feel free to{" "}
+          <span className="font-semibold">
+            {" "}
+            {isEngActive
+              ? ContactText.interested.en
+              : ContactText.interested.br}
+          </span>{" "}
+          {isEngActive ? ContactText.feel.en : ContactText.feel.br}
           <span className=" font-semibold underline decoration-blue ">
-            contact me.
+            {isEngActive ? ContactText.contact.en : ContactText.contact.br}
           </span>
         </motion.h3>
         <motion.div
@@ -57,7 +70,8 @@ export default function Contact({}: Props) {
           <div className="flex items-center justify-center space-x-4">
             <MapPinIcon className="text-blue h-8 w-8 animate-pulse" />
             <p className="xl:text-2xl md:text-2xl text-lg">
-              Tubarão, SC. Brazil.
+              Tubarão, SC.{" "}
+              {isEngActive ? ContactText.country.en : ContactText.country.br}.
             </p>
           </div>
         </motion.div>
@@ -75,7 +89,11 @@ export default function Contact({}: Props) {
               {...register("name")}
               className="contact-input xl:w-auto md:w-auto w-1/2"
               type="text"
-              placeholder="Name"
+              placeholder={
+                isEngActive
+                  ? ContactText.form.name.en
+                  : ContactText.form.name.br
+              }
             />
             <input
               {...register("email")}
@@ -88,15 +106,28 @@ export default function Contact({}: Props) {
             {...register("subject")}
             className="contact-input"
             type="text"
-            placeholder="Subject"
+            placeholder={
+              isEngActive
+                ? ContactText.form.subject.en
+                : ContactText.form.subject.br
+            }
           />
-          <textarea className="contact-input" placeholder="Message" />
+          <textarea
+            className="contact-input"
+            placeholder={
+              isEngActive
+                ? ContactText.form.message.en
+                : ContactText.form.message.br
+            }
+          />
           <button
             {...register("message")}
             className="bg-blue py-5 px-10 rounded-md text-black font-semibold text-lg"
             type="submit"
           >
-            Submit
+            {isEngActive
+              ? ContactText.form.button.en
+              : ContactText.form.button.br}
           </button>
         </motion.form>
       </div>

@@ -2,10 +2,14 @@ import React from "react";
 import { motion } from "framer-motion";
 import SkillTag from "./SkillTag";
 import { techsIcon } from "./TechsIcon";
+import { useLanguage } from "../context/LanguageProvider";
+import { SkillsText } from "@/exports/Texts";
 
 type Props = {};
 
 export default function Skills({}: Props) {
+  const { isEngActive } = useLanguage();
+
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -15,7 +19,9 @@ export default function Skills({}: Props) {
       id="skills"
       className=" flex flex-col relative snap-start xl:flex-row h-screen text-center justify-evenly items-center max-w-[2000px] xl:px-9 min-h-screen xl:space-y-0 mx-auto"
     >
-      <h3 className="title-section top-40 lg:top-20 md:top-20">skills</h3>
+      <h3 className="title-section top-40 lg:top-20 md:top-20">
+        {isEngActive ? SkillsText.mainTitle.en : SkillsText.mainTitle.br}
+      </h3>
 
       <div className="grid grid-cols-4 gap-5">
         {techsIcon.map(

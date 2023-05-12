@@ -3,10 +3,14 @@ import { SocialIcon } from "react-social-icons";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import HomeIcon from "@heroicons/react/24/outline/HomeIcon";
+import { useLanguage } from "../context/LanguageProvider";
+import { HeaderText } from "@/exports/Texts";
 
 type Props = {};
 
 export default function Header({}: Props) {
+  const { isEngActive } = useLanguage();
+
   return (
     <header className="flex flex-row justify-between sticky top-0  max-w-7xl mx-auto z-20 xl:items-center p-4">
       <motion.div
@@ -32,6 +36,7 @@ export default function Header({}: Props) {
           </div>
         </Link>
       </motion.div>
+
       <motion.div
         className="flex flex-row items-center text-gray-300 cursor-pointer"
         initial={{
@@ -56,7 +61,7 @@ export default function Header({}: Props) {
             />
 
             <p className="uppercase hidden md:inline-flex text-sm text-gray-400 hover:text-gray-400/75">
-              Contact me
+              {isEngActive ? HeaderText.contact.en : HeaderText.contact.br}
             </p>
           </div>
         </Link>

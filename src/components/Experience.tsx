@@ -2,6 +2,8 @@ import React from "react";
 import { motion } from "framer-motion";
 import ExperienceCard from "./ExperienceCard";
 import ScrollContainer from "react-scroll-horizontal";
+import { useLanguage } from "../context/LanguageProvider";
+import { ExperienceText } from "@/exports/Texts";
 
 type Props = {};
 
@@ -16,6 +18,8 @@ export type company = {
 };
 
 export default function Experience({}: Props) {
+  const { isEngActive } = useLanguage();
+
   const companies: company[] = [
     {
       name: "Senai Soluções Digitais",
@@ -73,7 +77,12 @@ export default function Experience({}: Props) {
       id="experience"
       className="flex relative h-screen snap-center lg:flex-col md:flex-col flex-row max-w-full px-10 items-center justify-evenly mx-auto"
     >
-      <h2 className="title-section lg:ml-10 md:ml-10">Experience</h2>
+      <h2 className="title-section lg:ml-10 md:ml-10">
+        {" "}
+        {isEngActive
+          ? ExperienceText.mainTitle.en
+          : ExperienceText.mainTitle.br}
+      </h2>
       <div className="w-full flex space-x-5 overflow-x-auto p-8 snap-x snap-mandatory lg:ml-8 scrollbar scrollbar-track-zinc-700/20 scrollbar-thumb-blue/90">
         {companies.map((company) => (
           <ExperienceCard key={company.name} company={company} />

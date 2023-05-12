@@ -1,6 +1,8 @@
 import Image from "next/image";
 import React from "react";
 import Project from "./Project";
+import { useLanguage } from "../context/LanguageProvider";
+import { ProjectsText } from "../exports/Texts";
 
 type Props = {};
 
@@ -10,7 +12,7 @@ export type project = {
   mockupArt: string;
 };
 export default function Projects({}: Props) {
-  const projects = [1, 2, 3, 4, 5];
+  const { isEngActive } = useLanguage();
 
   const projs: project[] = [
     {
@@ -21,10 +23,10 @@ export default function Projects({}: Props) {
     },
     {
       title: "Apollo - Soluções em Dados Solares",
-      description:"This website  was developed to a company called Apollo. It was built with React, TailwindCSS and Vite. The company has a product that will revolutioanize the way the Brazilians solar companies measure, control and store solar data, providing a better decision making ."  ,
-       mockupArt: "./apollo.png",
+      description:
+        "This website  was developed to a company called Apollo. It was built with React, TailwindCSS and Vite. The company has a product that will revolutioanize the way the Brazilians solar companies measure, control and store solar data, providing a better decision making .",
+      mockupArt: "./apollo.png",
     },
-    
   ];
 
   return (
@@ -32,10 +34,17 @@ export default function Projects({}: Props) {
       id="projects"
       className="relative snap-start h-screen flex justify-evenly overflow-hidden flex-col items-center text-left max-w-full mx-auto z-1"
     >
-      <h2 className="title-section ">Projects</h2>
+      <h2 className="title-section ">
+        {isEngActive ? ProjectsText.mainTitle.en : ProjectsText.mainTitle.br}
+      </h2>
       <div className="relative w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20 scrollbar scrollbar-track-zinc-700/20 scrollbar-thumb-blue/90 ">
         {projs.map((project, index) => (
-          <Project key={index} index={index} project={project} length={projs.length} />
+          <Project
+            key={index}
+            index={index}
+            project={project}
+            length={projs.length}
+          />
         ))}
       </div>
 
