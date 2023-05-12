@@ -31,7 +31,7 @@ export default function Project({ index, project, length }: Props) {
         </h3>
 
         <p className="text-center md:text-left lg:text-lg text-sm leading-tight overflow-y-auto max-h-80 px-9">
-          {project.description}
+          {isEngActive ? project.descriptionEn : project.descriptionBr}
         </p>
       </div>
     </div>

@@ -1,6 +1,6 @@
 export const HeaderText = {
   contact: {
-    br: "Contate-me",
+    br: "Entre em contato",
     en: "Contact me",
   },
 };
@@ -79,7 +79,7 @@ export const ProjectsText = {
     en: "Projects",
   },
   case: {
-    br: "Caso de estudo",
+    br: "Estudo de caso",
     en: "Case of Study",
   },
   of: {
