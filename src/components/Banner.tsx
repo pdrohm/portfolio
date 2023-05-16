@@ -52,7 +52,6 @@ export default function Banner({}: Props) {
         <div className="pt-6">
           <Link href="#about">
             <button className="banner-btn">
-              {" "}
               {isEngActive
                 ? BannerText.tabs.about.en
                 : BannerText.tabs.about.br}

@@ -1,7 +1,9 @@
 import React from "react";
 import { project } from "./Projects";
 import { useLanguage } from "../context/LanguageProvider";
-import { ProjectsText } from "../exports/Texts";
+import { ProjectsText, ProjectText } from "../exports/Texts";
+import Tags from "./Tags";
+import { FaGithub, FaPlusCircle } from "react-icons/fa";
 
 type Props = {
   index: number;
@@ -12,8 +14,12 @@ type Props = {
 export default function Project({ index, project, length }: Props) {
   const { isEngActive } = useLanguage();
 
+  const handleOpenLink = (link: string) => {
+    window.open(link, "_blank");
+  };
+
   return (
-    <div className="w-screen flex-shrink-0 flex flex-col space-y-5 items-center justify-start h-scren p-15 md:p-40 ">
+    <div className="w-screen h-3/4 flex flex-col xl:flex-row md:flex-row space-y-5 items-center justify-start p-15 md:p-20 ">
       <img
         className="xl:w-1/2 md:w-1/2 w-auto h-auto"
         src={project.mockupArt}
@@ -21,18 +27,43 @@ export default function Project({ index, project, length }: Props) {
       />
 
       <div className="space-y-10 px-0 md:px-10 max-w-6xl">
-        <h3 className="xl:text-3xl text-xl text-center flex xl:flex-row md:flex-row flex-col items-center justify-center">
-          <span className="underline decoration-blue xl:text-4xl text-2xl xl:mr-5 md:mr-3">
-            {isEngActive ? ProjectsText.case.en : ProjectsText.case.br}{" "}
-            {index + 1} {isEngActive ? ProjectsText.of.en : ProjectsText.of.br}{" "}
-            {length}:
-          </span>{" "}
+        <h3 className="xl:text-3xl text-xl text-center flex xl:flex-row md:flex-row flex-col items-center justify-center font-semibold">
           {project.title}
         </h3>
 
         <p className="text-center md:text-left lg:text-lg text-sm leading-tight overflow-y-auto max-h-80 px-9">
           {isEngActive ? project.descriptionEn : project.descriptionBr}
         </p>
+
+        <div className="flex justify-end xl:flex-row md:flex-row flex-col">
+          <div className="flex items-center xl:justify-start md:justify-start justify-center w-full flex-wrap">
+            {project.techs.map((tech) => (
+              <Tags name={tech} key={tech} />
+            ))}
+          </div>
+
+          <div className="flex xl:w-1/2 md:w-1/2 w-64 justify-center mx-auto xl:mt-0 md:mt-0 mt-5 ">
+            <button
+              className="cursor-pointer flex bg-black rounded-md p-2 items-center justify-center mr-5 w-32 h-12 "
+              onClick={() => handleOpenLink(project.githubLink)}
+            >
+              <FaGithub />
+              <span className="ml-1">
+                {isEngActive ? ProjectText.code.en : ProjectText.code.br}
+              </span>
+            </button>
+            <button
+              onClick={() => handleOpenLink(project.liveLink)}
+              className="cursor-pointer flex bg-blue rounded-md p-2 items-center justify-center w-32 h-12"
+            >
+              <FaPlusCircle />
+              <span className="ml-1">
+                {" "}
+                {isEngActive ? ProjectText.more.en : ProjectText.more.br}
+              </span>
+            </button>
+          </div>
+        </div>
       </div>
     </div>
   );

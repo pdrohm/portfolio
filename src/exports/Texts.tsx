@@ -88,6 +88,17 @@ export const ProjectsText = {
   },
 };
 
+export const ProjectText = {
+  code: {
+    br: "Código",
+    en: "Code",
+  },
+  more: {
+    br: "Ver mais",
+    en: "More info",
+  },
+};
+
 export const ContactText = {
   mainTitle: {
     br: "Contato",

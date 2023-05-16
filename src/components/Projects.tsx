@@ -1,4 +1,3 @@
-import Image from "next/image";
 import React from "react";
 import Project from "./Project";
 import { useLanguage } from "../context/LanguageProvider";
@@ -11,6 +10,9 @@ export type project = {
   descriptionEn: string;
   descriptionBr: string;
   mockupArt: string;
+  techs: string[];
+  githubLink: string;
+  liveLink: string;
 };
 export default function Projects({}: Props) {
   const { isEngActive } = useLanguage();
@@ -24,6 +26,9 @@ export default function Projects({}: Props) {
         "Phflix é uma aplicação web projetada para se assemelhar à interface da Netflix, construída usando React e alimentada pela API do TMDB. A aplicação possui um design responsivo, facilitando o uso em diversos dispositivos. Ao buscar dados na API do TMDB, o Phflix é capaz de fornecer aos usuários acesso a uma vasta biblioteca de conteúdo de filmes e programas de TV, contudo, foi desenvolvida somente a parte de design, não sendo 100% funcional.",
 
       mockupArt: "./phflix.png",
+      techs: ["HTML", "CSS", "React", "Git"],
+      githubLink: "https://github.com/pdrohm/phflix",
+      liveLink: "https://phflix.onrender.com/",
     },
     {
       title: "Apollo - Soluções em Dados Solares",
@@ -32,18 +37,22 @@ export default function Projects({}: Props) {
       descriptionBr:
         "Este website foi desenvolvido para uma empresa chamada Apollo. Foi construído com React, TailwindCSS e Vite. A empresa possui um produto que mudará a forma como as empresas de energia solar brasileiras medem, controlam e armazenam dados solares, proporcionando uma melhor tomada de decisão.",
       mockupArt: "./apollo.png",
+      techs: ["React", "HTML", "CSS", "TailWindCSS", "Git"],
+      githubLink: "https://github.com/pdrohm/apollows",
+      liveLink: "https://apollo-website.onrender.com/",
     },
   ];
 
   return (
     <div
       id="projects"
-      className="relative snap-start h-screen flex justify-evenly overflow-hidden flex-col items-center text-left max-w-full mx-auto z-1"
+      className="relative flex justify-evenly flex-col items-center text-left  mx-auto z-1"
     >
-      <h2 className="title-section ">
+      <h2 className="title-section top-0">
         {isEngActive ? ProjectsText.mainTitle.en : ProjectsText.mainTitle.br}
       </h2>
-      <div className="relative w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20 scrollbar scrollbar-track-zinc-700/20 scrollbar-thumb-blue/90 ">
+
+      <div className="relative flex z-20 flex-col">
         {projs.map((project, index) => (
           <Project
             key={index}

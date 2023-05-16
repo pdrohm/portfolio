@@ -12,7 +12,7 @@ export default function Header({}: Props) {
   const { isEngActive } = useLanguage();
 
   return (
-    <header className="flex flex-row justify-between sticky top-0  max-w-7xl mx-auto z-20 xl:items-center p-4">
+    <header className="flex flex-row justify-between sticky top-0  max-w-7xl mx-auto z-50 xl:items-center p-4">
       <motion.div
         className="flex flex-row items-center"
         initial={{

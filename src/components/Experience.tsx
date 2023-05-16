@@ -20,12 +20,11 @@ export default function Experience({}: Props) {
       className="flex relative h-screen snap-center lg:flex-col md:flex-col flex-row max-w-full px-10 items-center justify-evenly mx-auto"
     >
       <h2 className="title-section lg:ml-10 md:ml-10">
-        {" "}
         {isEngActive
           ? ExperienceText.mainTitle.en
           : ExperienceText.mainTitle.br}
       </h2>
-      <div className="w-full flex space-x-5 overflow-x-auto p-8 snap-x snap-mandatory lg:ml-8 scrollbar scrollbar-track-zinc-700/20 scrollbar-thumb-blue/90">
+      <div className="w-full flex space-x-5 overflow-x-auto p-8 snap-x snap-mandatory lg:ml-8 scrollbar scrollbar-track-zinc-700/20 scrollbar-thumb-blue/90 xl:mt-5 md:mt-5">
         {companies.map((company) => (
           <ExperienceCard key={company.name} company={company} />
         ))}
