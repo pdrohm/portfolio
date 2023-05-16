@@ -49,7 +49,7 @@ export default function Banner({}: Props) {
           <span className="mr-4">{text}</span>
           <Cursor cursorColor="#0d80bf" />
         </h2>
-        <div className="pt-6">
+        <div className="pt-6 flex xl:flew-row md:flex-row flex-col">
           <Link href="#about">
             <button className="banner-btn">
               {isEngActive
