@@ -54,7 +54,7 @@ export const AboutText = {
     en: "Tech Journey",
   },
   paragraph: {
-    br: "Eu sou Pedro Henrique Marques, tenho 23 anos. Eu moro no sul do Brasil, em um estado chamado Santa Catarina. Trabalho na área de tecnologia desde 2019, começando como suporte de usuário, tendo mais contato com bancos de dados e, posteriormente, como suporte para redes e segurança digital. Desde o início de 2021, tenho trabalhado com programação e tive experiências com JavaScript, TypeScript, ReactJS, NodeJS, Git, HTML, CSS, React Native, Vue, PHP, Symfony, GraphQL, Redux e outras tecnologias e ferramentas da indústria.",
+    br: "Eu sou Pedro Henrique Marques, tenho 23 anos. Eu moro no sul do Brasil, em um estado chamado Santa Catarina. Trabalho na área de tecnologia desde 2019, começando como suporte de usuário, tendo mais contato com bancos de dados e, posteriormente, como suporte para redes e segurança digital. Desde o início de 2021, trabalho com programação e tive experiências com JavaScript, TypeScript, ReactJS, NodeJS, Git, HTML, CSS, React Native, Vue, PHP, Symfony, GraphQL, Redux e outras tecnologias e ferramentas da indústria.",
     en: "I'm Pedro Henrique Marques, 23yo. I live in the South of Brazil, in a state called Santa Catarina. I work in the technology field since 2019, starting as user support, having more contact with databases, and later as support for networks and digital security. Since the beginning of 2021, I've been working with programming and had experiences with JavaScript, TypeScript, ReactJS, NodeJS, Git, HTML, CSS, React Native, Vue, PHP, Symfony, GraphQL, Redux, and other technologies and tools in the industry.",
   },
 };
