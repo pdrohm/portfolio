@@ -26,7 +26,7 @@ export default function Projects({}: Props) {
         "Phflix é uma aplicação web projetada para se assemelhar à interface da Netflix, construída usando React e alimentada pela API do TMDB. A aplicação possui um design responsivo, facilitando o uso em diversos dispositivos. Ao buscar dados na API do TMDB, o Phflix é capaz de fornecer aos usuários acesso a uma vasta biblioteca de conteúdo de filmes e programas de TV, contudo, foi desenvolvida somente a parte de design, não sendo 100% funcional.",
 
       mockupArt: "./phflix.png",
-      techs: ["HTML", "CSS", "React", "Git"],
+      techs: ["html", "css","javascript", "react", "git"],
       githubLink: "https://github.com/pdrohm/phflix",
       liveLink: "https://phflix.onrender.com/",
     },
@@ -37,7 +37,7 @@ export default function Projects({}: Props) {
       descriptionBr:
         "Este website foi desenvolvido para uma empresa chamada Apollo. Foi construído com React, TailwindCSS e Vite. A empresa possui um produto que mudará a forma como as empresas de energia solar brasileiras medem, controlam e armazenam dados solares, proporcionando uma melhor tomada de decisão.",
       mockupArt: "./apollo.png",
-      techs: ["React", "HTML", "CSS", "TailWindCSS", "Git"],
+      techs: ["react", "html", "css", "javascript", "tailwindcss", "git"],
       githubLink: "https://github.com/pdrohm/apollows",
       liveLink: "https://apollo-website.onrender.com/",
     },

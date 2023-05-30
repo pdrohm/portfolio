@@ -76,18 +76,18 @@ export default function Contact({}: Props) {
           </div>
         </motion.div>
 
-        <motion.form
+        <form
           initial={{ opacity: 0, x: 500 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 2 }}
           viewport={{ once: true }}
           onSubmit={handleSubmit(onSubmit)}
-          className="flex flex-col space-y-3 w-fit mx-auto"
+          className="flex flex-col space-y-3 w-full mx-auto"
         >
           <div className="flex space-x-3 ">
             <input
               {...register("name")}
-              className="contact-input xl:w-auto md:w-auto w-1/2"
+              className="contact-input xl:w-auto md:w-auto "
               type="text"
               placeholder={
                 isEngActive
@@ -129,7 +129,7 @@ export default function Contact({}: Props) {
               ? ContactText.form.button.en
               : ContactText.form.button.br}
           </button>
-        </motion.form>
+        </form>
       </div>
     </div>
   );

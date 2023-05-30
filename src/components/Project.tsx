@@ -4,6 +4,7 @@ import { useLanguage } from "../context/LanguageProvider";
 import { ProjectsText, ProjectText } from "../exports/Texts";
 import Tags from "./Tags";
 import { FaGithub, FaPlusCircle } from "react-icons/fa";
+import { techsIcon } from "./TechsIcon";
 
 type Props = {
   index: number;
@@ -13,6 +14,12 @@ type Props = {
 
 export default function Project({ index, project, length }: Props) {
   const { isEngActive } = useLanguage();
+
+  const filteredIcons = techsIcon.filter((icon) =>
+    project.techs.includes(icon.name)
+  );
+
+  console.log(project.title, filteredIcons);
 
   const handleOpenLink = (link: string) => {
     window.open(link, "_blank");
@@ -37,8 +44,13 @@ export default function Project({ index, project, length }: Props) {
 
         <div className="flex justify-end xl:flex-row md:flex-row flex-col">
           <div className="flex items-center xl:justify-start md:justify-start justify-center w-full flex-wrap">
-            {project.techs.map((tech) => (
-              <Tags name={tech} key={tech} />
+            {filteredIcons.map((icon) => (
+              <img
+                src={icon.src}
+                alt={icon.alt}
+                key={icon.name}
+                className="w-10 h-10 mx-2"
+              />
             ))}
           </div>
 

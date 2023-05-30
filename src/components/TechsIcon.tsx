@@ -1,5 +1,19 @@
 export const techsIcon = [
   {
+    name: "html",
+    src: "/html.png",
+    alt: "HTML Icon",
+    fullName: "HTML",
+    show: true,
+  },
+  {
+    name: "css",
+    src: "/css.png",
+    alt: "javaScript Icon",
+    fullName: "CSS",
+    show: true,
+  },
+  {
     name: "js",
     src: "/javascript.png",
     alt: "javaScript Icon",
@@ -90,5 +104,19 @@ export const techsIcon = [
     alt: "nextJs Icon",
     fullName: "Next.JS",
     show: false,
+  },
+  {
+    name: "docker",
+    src: "/docker.png",
+    alt: "Docker Icon",
+    fullName: "Docker",
+    show: true,
+  },
+  {
+    name: "tailwindcss",
+    src: "/tailwind.png",
+    alt: "TailwindCSS Icon",
+    fullName: "TailwindCSS",
+    show: true,
   },
 ];
