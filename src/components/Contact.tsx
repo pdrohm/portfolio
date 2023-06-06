@@ -76,7 +76,7 @@ export default function Contact({}: Props) {
           </div>
         </motion.div>
 
-        <form
+        <motion.form
           initial={{ opacity: 0, x: 500 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 2 }}
@@ -129,7 +129,7 @@ export default function Contact({}: Props) {
               ? ContactText.form.button.en
               : ContactText.form.button.br}
           </button>
-        </form>
+        </motion.form>
       </div>
     </div>
   );
