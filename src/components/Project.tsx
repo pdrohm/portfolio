@@ -19,8 +19,6 @@ export default function Project({ index, project, length }: Props) {
     project.techs.includes(icon.name)
   );
 
-  console.log(project.title, filteredIcons);
-
   const handleOpenLink = (link: string) => {
     window.open(link, "_blank");
   };
@@ -45,12 +43,16 @@ export default function Project({ index, project, length }: Props) {
         <div className="flex justify-end xl:flex-row md:flex-row flex-col">
           <div className="flex items-center xl:justify-start md:justify-start justify-center w-full flex-wrap">
             {filteredIcons.map((icon) => (
-              <img
-                src={icon.src}
-                alt={icon.alt}
-                key={icon.name}
-                className="w-10 h-10 mx-2"
-              />
+              <div key={icon.name} className="group relative inline-block">
+                <img
+                  src={icon.src}
+                  alt={icon.alt}
+                  className="w-10 h-10 mx-2 transition-opacity duration-300 ease-in-out opacity-100 group-hover:opacity-50"
+                />
+                <span className="absolute top-full left-1/2 -translate-x-1/2  text-white text-xs px-2 py-1 rounded opacity-0 transition-opacity duration-300 ease-in-out group-hover:opacity-100 mb-1">
+                  {icon.name}
+                </span>
+              </div>
             ))}
           </div>
 

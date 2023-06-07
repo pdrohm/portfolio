@@ -14,14 +14,14 @@ export const techsIcon = [
     show: true,
   },
   {
-    name: "js",
+    name: "javascript",
     src: "/javascript.png",
     alt: "javaScript Icon",
     fullName: "JavaScript",
     show: true,
   },
   {
-    name: "ts",
+    name: "typescript",
     src: "/typescript.png",
     alt: "typescript Icon",
     fullName: "TypeScript",

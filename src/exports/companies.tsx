@@ -23,7 +23,7 @@ export const companies: company[] = [
       en: "Mobile Developer",
       br: "Desenvolvedor Mobile",
     },
-    technologies: ["reactNative", "js", "ts", "docker"],
+    technologies: ["reactNative", "javascript", "typescript", "docker"],
     duration: "12/2022 - ",
     actual: true,
     activities: {
@@ -66,7 +66,7 @@ export const companies: company[] = [
       en: "Web Developer Intern",
       br: "Desenvolvedor Web Estagiário",
     },
-    technologies: ["symfony", "php", "react", "postgres", "docker"],
+    technologies: ["symfony", "php", "react", "postgres", "docker", 'javascript'],
     duration: "06/2021 - 05/2022",
     activities: {
       en: [
