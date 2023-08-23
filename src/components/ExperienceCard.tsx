@@ -4,8 +4,6 @@ import { techsIcon } from "./TechsIcon";
 import { CalendarIcon } from "@heroicons/react/24/solid";
 import { company } from "@/exports/companies";
 import { useLanguage } from "../context/LanguageProvider";
-import { copyFile } from "fs";
-import Image from "next/image";
 
 type Props = {
   company: company;
@@ -37,7 +35,7 @@ export default function ExperienceCard({ company }: Props) {
 
   return (
     <article
-      className="flex flex-col rounded-lg items-center space-y-6 flex-shrink-0 snap-center bg-zinc-700 p-10 opacity-100  lg:opacity-40 md:opacity-40 hover:opacity-100 cursor-pointer transition-opacity duration-250 overflow-hidden xl:h-[600px]"
+      className="flex flex-col rounded-lg items-center space-y-6 flex-shrink-0 snap-center bg-zinc-200 dark:bg-zinc-700 p-10 opacity-100  dark:lg:opacity-40 dark:md:opacity-40 dark:hover:opacity-100 cursor-pointer transition-opacity duration-250 overflow-hidden xl:h-[600px]"
       onClick={handleOnClick}
     >
       <div className="flex items-center flex-col">
