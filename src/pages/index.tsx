@@ -1,13 +1,12 @@
 import Header from "../components/Header";
 import Banner from "../components/Banner";
 import About from "../components/About";
-import Experience from "../components/Experience";
 import Skills from "../components/Skills";
 import Projects from "../components/Projects";
 import Contact from "../components/Contact";
 import Footer from "../components/Footer";
 import LanguageToggle from "../components/LanguageToggle";
-import Teste from "@/components/Teste";
+import Experience from '../components/Experience';
 
 export default function Home() {
   return (
@@ -17,7 +16,6 @@ export default function Home() {
       <Banner />
       <About />
       <Experience />
-      <Teste />
       <Skills />
       <Projects />
       <Contact />

@@ -28,11 +28,9 @@ export const companies: company[] = [
     actual: true,
     activities: {
       en: [
-        "Worked on the development of a safety monitoring and management platform designed to enable real-time monitoring of worker safety in the field, ensure compliance with current OSH legislation, and prevent accidents, fines, and legal issues. Contributed to the migration of the project from Angular to React, implementing new features and ensuring code compatibility.",
-        "As a Mobile Applications Responsible for my squad, I'm responsible for developing and maintaining mobile applications with React Native. Assisted in the publication of applications to both Apple Store and Play Store, and contributed to the development of various SENAI applications by implementing new features and addressing bugs, using mainly React Native and its tools. ",
+        "As a Mobile Applications Responsible for my squad, I'm responsible for developing and maintaining mobile applications with React Native and its tools. Assisted in the publication of applications to both Apple Store and Play Store, and contributed to the development of various SENAI applications by implementing new features and addressing bugs. ",
       ],
       br: [
-        "Contribui no desenvolvimento de uma plataforma de monitoramento e gestão de segurança projetada para permitir o monitoramento em tempo real da segurança dos trabalhadores de obras, garantir conformidade com a legislação de segurança, prevenir acidentes, multas e problemas legais. Contribuí para a migração do projeto de Angular para React, implementando novos recursos e garantindo a compatibilidade do código.",
         "Como responsável pelas Aplicações Móveis da equipe do Departamento Nacional, fui responsável por desenvolver e manter aplicações móveis com React Native. Auxiliei na publicação das aplicações tanto na Apple Store quanto na Play Store e contribuí para o desenvolvimento de várias aplicações do SENAI, implementando novos recursos e solucionando bugs, utilizando principalmente React Native e suas ferramentas. ",
       ],
     },
