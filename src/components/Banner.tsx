@@ -42,11 +42,11 @@ export default function Banner({}: Props) {
         alt="PH Picture"
       />
       <div>
-        <h2 className="text-sm xl:text-lg uppercase text-zinc-500 pb-2 tracking-[15px]">
+        <h2 className="text-sm xl:text-lg uppercase text-zinc-700 dark:text-zinc-500 pb-2 tracking-[15px]">
           {isEngActive ? BannerText.role.en : BannerText.role.br}
         </h2>
         <h2 className="text-3xl lg:text-5xl scroll-px-10">
-          <span className="mr-4">{text}</span>
+          <span className="mr-4 dark:text-[#E4E4E7] text-zinc-800">{text}</span>
           <Cursor cursorColor="#0d80bf" />
         </h2>
         <div className="pt-6 flex xl:flew-row md:flex-row flex-col">

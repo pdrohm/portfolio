@@ -19,7 +19,6 @@ export default function About({}: Props) {
     >
       <div className="flex justify-center items-center">
         <h2 className="title-section text-white">
-          {" "}
           {isEngActive ? AboutText.mainTitle.en : AboutText.mainTitle.br}
         </h2>
       </div>
@@ -33,11 +32,13 @@ export default function About({}: Props) {
           src="/perfil.jpg"
           alt="PH Picture"
         />
-        <div className="flex flex-col items-center justify-center p-8 text-justify bg-background rounded-xl  sm:mb-16">
-          <h2 className="text-zinc-400 font-semibold text-4xl ">
+        <div className="flex flex-col items-center justify-center p-8 text-justify bg-backgroundLight dark:bg-backgroundDark rounded-xl  sm:mb-16">
+          <h2 className="dark:text-zinc-300 text-zinc-800 font-semibold text-4xl ">
             {isEngActive ? AboutText.title.en : AboutText.title.br}
           </h2>
-          <p className="text-clip">{isEngActive ? AboutText.paragraph.en : AboutText.paragraph.br}</p>
+          <p className="text-clip text-zinc-950 dark:text-zinc-100">
+            {isEngActive ? AboutText.paragraph.en : AboutText.paragraph.br}
+          </p>
         </div>
       </div>
     </motion.div>

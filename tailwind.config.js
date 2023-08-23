@@ -15,9 +15,11 @@ module.exports = {
       },
       colors: {
         blue: "#0d80bf",
-        background: 'rgb(36,36,36)'
+        backgroundDark: "rgb(36,36,36)",
+        backgroundLight: "#faf8ff",
       },
     },
   },
   plugins: [require("tailwind-scrollbar")],
+  darkMode: "class",
 };

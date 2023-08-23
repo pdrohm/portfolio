@@ -12,10 +12,13 @@ function Experience() {
   return (
     <div className='h-screen flex items-center justify-center'>
 
-    <Swiper slidesPerView={3}
+    <Swiper
       spaceBetween={10}
       navigation={true}
       modules={[Navigation, Autoplay]}
+      autoplay={{ delay: 3000 }}
+
+      
       
       breakpoints={{
         0: {

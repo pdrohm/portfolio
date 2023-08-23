@@ -49,7 +49,7 @@ export default function Project({ index, project, length }: Props) {
                   alt={icon.alt}
                   className="w-10 h-10 mx-2 transition-opacity duration-300 ease-in-out opacity-100 group-hover:opacity-50"
                 />
-                <span className="absolute top-full left-1/2 -translate-x-1/2  text-white text-xs px-2 py-1 rounded opacity-0 transition-opacity duration-300 ease-in-out group-hover:opacity-100 mb-1">
+                <span className="absolute top-full left-1/2 -translate-x-1/2  dark:text-zinc-200 text-zinc-800 text-xs px-2 py-1 rounded opacity-0 transition-opacity duration-300 ease-in-out group-hover:opacity-100 mb-1">
                   {icon.name}
                 </span>
               </div>
@@ -61,8 +61,8 @@ export default function Project({ index, project, length }: Props) {
               className="cursor-pointer flex bg-black rounded-md p-2 items-center justify-center mr-5 w-32 h-12 "
               onClick={() => handleOpenLink(project.githubLink)}
             >
-              <FaGithub />
-              <span className="ml-1">
+              <FaGithub className="text-zinc-200" />
+              <span className="ml-1 text-zinc-200">
                 {isEngActive ? ProjectText.code.en : ProjectText.code.br}
               </span>
             </button>
@@ -72,7 +72,6 @@ export default function Project({ index, project, length }: Props) {
             >
               <FaPlusCircle />
               <span className="ml-1">
-                {" "}
                 {isEngActive ? ProjectText.more.en : ProjectText.more.br}
               </span>
             </button>

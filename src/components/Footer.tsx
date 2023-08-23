@@ -9,7 +9,7 @@ export default function Footer({}: Props) {
   const { isEngActive } = useLanguage();
 
   return (
-    <div className="flex bg-zinc-300 text-zinc-900 h-auto flex-col  ">
+    <div className="flex bg-zinc-800 dark:bg-zinc-300 text-zinc-200 dark:text-zinc-900 h-auto flex-col  ">
       <div className="flex xl:flex-row md:flex-row flex-col border-b-[1px] items-center justify-between mx-auto border-zinc-800 mb-10 xl:w-2/3 md:2/3">
         <div className="h-72 flex flex-col xl:items-start md:items-start items-center justify-center">
           <h3 className="text-start xl:text-2xl md:text-2xl text-lg mb-5 uppercase">

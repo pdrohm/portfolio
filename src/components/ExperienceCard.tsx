@@ -35,8 +35,6 @@ export default function ExperienceCard({ company }: Props) {
       : company.duration + " atualmente"
     : company.duration;
 
-  console.log("activities", activities);
-
   return (
     <article
       className="flex flex-col rounded-lg items-center space-y-6 flex-shrink-0 snap-center bg-zinc-700 p-10 opacity-100  lg:opacity-40 md:opacity-40 hover:opacity-100 cursor-pointer transition-opacity duration-250 overflow-hidden xl:h-[600px]"

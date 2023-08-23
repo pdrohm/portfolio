@@ -26,7 +26,7 @@ export default function Projects({}: Props) {
         "Phflix é uma aplicação web projetada para se assemelhar à interface da Netflix, construída usando React e alimentada pela API do TMDB. A aplicação possui um design responsivo, facilitando o uso em diversos dispositivos. Ao buscar dados na API do TMDB, o Phflix é capaz de fornecer aos usuários acesso a uma vasta biblioteca de conteúdo de filmes e programas de TV, contudo, foi desenvolvida somente a parte de design, não sendo 100% funcional.",
 
       mockupArt: "./phflix.png",
-      techs: ["html", "css","javascript", "react", "git"],
+      techs: ["html", "css", "javascript", "react", "git"],
       githubLink: "https://github.com/pdrohm/phflix",
       liveLink: "https://phflix.onrender.com/",
     },
@@ -65,7 +65,7 @@ export default function Projects({}: Props) {
 
       <div
         id="faixa"
-        className="w-full absolute z-0 top-[20%] bg-blue/10 left-0 h-[500px] -skew-y-12"
+        className="w-full absolute z-0 top-[20%] dark:bg-blue/10 bg-zinc-600/10 left-0 h-[500px] -skew-y-12"
       ></div>
     </div>
   );
