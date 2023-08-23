@@ -12,9 +12,9 @@ const ThemeToggle: React.FC = () => {
       onClick={toggleTheme}
     >
       {isDarkMode ? (
-        <BsFillMoonFill className="text-zinc-200 bg-backgroundDark" />
+        <BsFillMoonFill className="text-zinc-200 bg-backgroundDark w-full rounded-full" />
       ) : (
-        <BsFillSunFill className="text-zinc-800 bg-backgroundLight" />
+        <BsFillSunFill className="text-zinc-800 bg-backgroundLight w-full rounded-full" />
       )}
     </div>
   );
