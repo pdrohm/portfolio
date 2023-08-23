@@ -24,7 +24,7 @@ export default function SkillTag({ left, tech }: Props) {
         <img
           className="border border-gray-600 rounded-full object-cover w-16 h-16 md:w-28  md:h-28 xl:w-32 xl:h-32 filter group-hover:grayscale transition duration-350 ease-in-out"
           src={tech.src}
-        />
+          alt={`skill tag of ${tech.name}`}        />
       ) : (
         <motion.img
           initial={{ opacity: 0, x: left ? -200 : 200 }}
@@ -33,6 +33,7 @@ export default function SkillTag({ left, tech }: Props) {
           viewport={{ once: true }}
           className="border border-gray-600 rounded-full object-cover w-16 h-16 md:w-28  md:h-28 xl:w-32 xl:h-32 filter group-hover:grayscale transition duration-350 ease-in-out"
           src={tech.src}
+          alt={`skill tag of ${tech.name}`}    
         />
       )}
 

@@ -19,7 +19,7 @@ const LanguageToggle: React.FC = () => {
         >
           <img
             src={isEngActive ? "rounded-en.svg" : "rounded-br.svg"}
-            alt={isEngActive ? "USA" : "BR"}
+            alt={isEngActive ? "English option" : "Brazilian option"}
             className="w-10 h-10 m-1 rounded-full"
           />
         </div>

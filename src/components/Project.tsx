@@ -28,7 +28,7 @@ export default function Project({ index, project, length }: Props) {
       <img
         className="xl:w-1/2 md:w-1/2 w-auto h-auto"
         src={project.mockupArt}
-        alt=""
+        alt="Laptop and Mobile Mockup of the project"
       />
 
       <div className="space-y-10 px-0 md:px-10 max-w-6xl">
