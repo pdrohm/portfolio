@@ -30,7 +30,7 @@ export default function ExperienceCard({ company }: Props) {
 
   const duration = company.actual
     ? isEngActive
-      ? company.duration + " actual work"
+      ? company.duration + " current work"
       : company.duration + " atualmente"
     : company.duration;
 

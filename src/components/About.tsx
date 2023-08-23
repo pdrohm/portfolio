@@ -15,10 +15,10 @@ export default function About({}: Props) {
       whileInView={{ opacity: 1 }}
       transition={{ duration: 2 }}
       id="about"
-      className="flex relative flex-col items-center justify-evenly h-screen"
+      className="flex relative flex-col items-center justify-evenly h-screen bg-bg1 bg-cover"
     >
       <div className="flex justify-center items-center">
-        <h2 className="title-section">
+        <h2 className="title-section text-white">
           {" "}
           {isEngActive ? AboutText.mainTitle.en : AboutText.mainTitle.br}
         </h2>
@@ -33,11 +33,11 @@ export default function About({}: Props) {
           src="/perfil.jpg"
           alt="PH Picture"
         />
-        <div className="flex flex-col items-center justify-center p-8 text-justify ">
-          <h2 className="text-zinc-400 font-semibold text-4xl mb-12">
+        <div className="flex flex-col items-center justify-center p-8 text-justify bg-background rounded-xl  sm:mb-16">
+          <h2 className="text-zinc-400 font-semibold text-4xl ">
             {isEngActive ? AboutText.title.en : AboutText.title.br}
           </h2>
-          <p>{isEngActive ? AboutText.paragraph.en : AboutText.paragraph.br}</p>
+          <p className="text-clip">{isEngActive ? AboutText.paragraph.en : AboutText.paragraph.br}</p>
         </div>
       </div>
     </motion.div>

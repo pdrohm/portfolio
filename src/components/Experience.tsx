@@ -17,9 +17,9 @@ export default function Experience({}: Props) {
       whileInView={{ opacity: 1 }}
       transition={{ duration: 2 }}
       id="experience"
-      className="flex relative h-screen snap-center lg:flex-col md:flex-col flex-row max-w-full px-10 items-center justify-evenly mx-auto"
+      className="flex relative h-screen snap-center lg:flex-col md:flex-col flex-row max-w-full px-10 items-center justify-evenly mx-auto mt-10"
     >
-      <h2 className="title-section lg:ml-10 md:ml-10">
+      <h2 className="title-section lg:ml-10 md:ml-10 top-2">
         {isEngActive
           ? ExperienceText.mainTitle.en
           : ExperienceText.mainTitle.br}
