@@ -36,7 +36,7 @@ function NavList() {
         leaveFrom="transform opacity-100 scale-100"
         leaveTo="transform opacity-0 scale-95"
       >
-        <Menu.Items className="absolute right-0 z-10 w-32 origin-top-right rounded-md bg-backgroundLight dark:bg-backgroundDark shadow-lg ring-1 ring-black dark:ring-zinc-300 ring-opacity-5 focus:outline-none ">
+        <Menu.Items className="absolute left-0 z-10 w-32 origin-top-right rounded-md bg-backgroundLight dark:bg-backgroundDark shadow-lg ring-1 ring-black dark:ring-zinc-300 ring-opacity-5 focus:outline-none ">
           <div className="py-1">
             {links.map((link) => (
               <Menu.Item key={link.label}>

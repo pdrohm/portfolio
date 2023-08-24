@@ -17,7 +17,14 @@ export default function Header({}: Props) {
   console.log("width", width);
 
   return (
-    <header className="flex flex-row justify-center sticky top-0 w-full z-50 items-center  dark:bg-backgroundDark bg-backgroundLight dark:text-zinc-200 h-24">
+    <header className="flex flex-row justify-evenly sticky top-0 w-full z-50 items-center  dark:bg-backgroundDark bg-backgroundLight dark:text-zinc-200 h-24">
+      <a href="#home">
+        <div className="flex items-end justify-evenly cursor-pointer">
+          <img src="./ph.png" className="w-12" />
+          <span className="ml-4 hidden sm:block">Pedro H. Marques</span>
+        </div>
+      </a>
+
       {!isSmallScreen ? (
         <div className="pt-6 flex flex-row  ">
           <Link href="#home">
