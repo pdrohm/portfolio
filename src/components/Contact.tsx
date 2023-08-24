@@ -144,7 +144,7 @@ export default function Contact({}: Props) {
             <div className="flex space-x-3 ">
               <input
                 {...register("name")}
-                className="contact-input xl:w-auto md:w-auto w-1/2 "
+                className="contact-input xl:w-full md:w-full w-1/2 "
                 type="text"
                 placeholder={
                   isEngActive
@@ -154,7 +154,7 @@ export default function Contact({}: Props) {
               />
               <input
                 {...register("email")}
-                className="contact-input xl:w-auto md:w-auto w-1/2"
+                className="contact-input xl:w-full md:w-full w-1/2"
                 type="email"
                 placeholder="Email"
               />
