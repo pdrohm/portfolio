@@ -6,14 +6,14 @@
 
 @layer base{
   body {
-      @apply dark:bg-gray-800 bg-white
+      @apply dark:bg-gray-800 bg-white font-roboto
   }
 }
 
 @layer components {
 
-  .banner-btn {
-    @apply px-6 py-2 border-[#242424] rounded-full text-sm uppercase tracking-widest text-zinc-900 dark:text-zinc-500 transition-all hover:border-[#0d80bf]/30 hover:text-[#0d80bf]/30
+  .nav-btn {
+    @apply lg:px-6 px-2 py-2 border-[#242424] rounded-full text-base  capitalize tracking-widest text-zinc-900 dark:text-zinc-200 transition-all hover:border-[#0d80bf]/30 hover:text-[#0d80bf]/30 dark:hover:border-[#0d80bf]/30 dark:hover:text-[#0d80bf]/30
   }
   
   .logo-socials {

@@ -37,7 +37,6 @@ const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
     localStorage.setItem("theme", theme);
   }, [theme, colorTheme]);
 
-
   const toggleTheme = () => {
     setIsDarkMode(!isDarkMode);
     document.documentElement.classList.toggle("dark");

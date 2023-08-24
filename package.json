@@ -10,6 +10,7 @@
     "export": "next export"
   },
   "dependencies": {
+    "@headlessui/react": "^1.7.17",
     "@heroicons/react": "^2.0.17",
     "@netlify/plugin-nextjs": "^4.36.1",
     "@react-hook/window-size": "^3.1.1",

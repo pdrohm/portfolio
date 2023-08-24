@@ -60,7 +60,7 @@ export default function Footer({}: Props) {
         <p className="text-[11px]">
           {isEngActive ? FooterText.madeBy.en : FooterText.madeBy.br}
           <span className="underline">
-            <a href="#banner">Pedro H. Marques.</a>
+            <a href="#home">Pedro H. Marques.</a>
           </span>
         </p>
       </div>

@@ -25,6 +25,10 @@ export const BannerText = {
     ],
   },
   tabs: {
+    home: {
+      br: "Início",
+      en: "Home",
+    },
     about: {
       br: "Sobre",
       en: "About",
@@ -40,6 +44,10 @@ export const BannerText = {
     projects: {
       br: "Projetos",
       en: "Projects",
+    },
+    contact: {
+      br: "Contato",
+      en: "Contact",
     },
   },
 };

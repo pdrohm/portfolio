@@ -19,7 +19,7 @@ export default function Banner({}: Props) {
 
   return (
     <div
-      id="banner"
+      id="home"
       className="h-screen relative flex flex-col space-y-8 items-center xl:justify-center md:justify-center justify-start text-center overflow-hidden"
     >
       <div className="bg-zinc-700/20  xl:w-14 xl:h-64 md:w-14 md:h-64 absolute xl:left-0 md:left-0 xl:top-96 bottom-28 h-14 w-64 flex xl:flex-col md:flex-col items-center justify-evenly xl:rounded-r-md md:rounded-r-md rounded-md xl:rounded-l-none md:rounded-l-none">
@@ -49,39 +49,6 @@ export default function Banner({}: Props) {
           <span className="mr-4 dark:text-zinc-200 text-zinc-800">{text}</span>
           <Cursor cursorColor="#0d80bf" />
         </h2>
-        <div className="pt-6 flex xl:flew-row md:flex-row flex-col">
-          <Link href="#about">
-            <button className="banner-btn">
-              {isEngActive
-                ? BannerText.tabs.about.en
-                : BannerText.tabs.about.br}
-            </button>
-          </Link>
-
-          <Link href="#experience">
-            <button className="banner-btn">
-              {isEngActive
-                ? BannerText.tabs.experience.en
-                : BannerText.tabs.experience.br}
-            </button>
-          </Link>
-
-          <Link href="#skills">
-            <button className="banner-btn">
-              {isEngActive
-                ? BannerText.tabs.skills.en
-                : BannerText.tabs.skills.br}
-            </button>
-          </Link>
-
-          <Link href="#projects">
-            <button className="banner-btn">
-              {isEngActive
-                ? BannerText.tabs.projects.en
-                : BannerText.tabs.projects.br}
-            </button>
-          </Link>
-        </div>
       </div>
     </div>
   );

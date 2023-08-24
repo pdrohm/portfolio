@@ -5,7 +5,7 @@ const LanguageToggle: React.FC = () => {
   const { isEngActive, toggleLanguage } = useLanguage();
 
   return (
-    <div className="flex items-center absolute top-5 left-1/2 cursor-pointer z-50">
+    <div className="flex items-center cursor-pointer">
       <div
         className={`relative rounded-full w-14 h-8 transition-colors duration-300 ${
           isEngActive ? "bg-[#dd3127]" : "bg-[#029639]"
