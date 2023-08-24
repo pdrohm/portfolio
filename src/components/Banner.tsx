@@ -39,7 +39,7 @@ export default function Banner({}: Props) {
       <img
         className="relative rounded-full mx-auto object-cover lg:w-72 lg:h-72 md:w-64 md:h-64 w-56 h-56"
         src="./ph.png"
-        alt="PH Picture"
+        alt="Pedro Henrique Picture"
       />
       <div>
         <h2 className="text-sm xl:text-lg uppercase text-zinc-700 dark:text-zinc-400 pb-2 tracking-[15px]">

@@ -20,7 +20,7 @@ export default function Header({}: Props) {
     <header className="flex flex-row justify-evenly sticky top-0 w-full z-50 items-center  dark:bg-backgroundDark bg-backgroundLight dark:text-zinc-200 h-24">
       <a href="#home">
         <div className="flex items-end justify-evenly cursor-pointer">
-          <img src="./ph.png" className="w-12" />
+          <img src="./ph.png" className="w-12" alt="Logo of Pedro Picture" />
           <span className="ml-4 hidden sm:block">Pedro H. Marques</span>
         </div>
       </a>
