@@ -22,7 +22,7 @@ export default function Banner({}: Props) {
       id="home"
       className="relative flex h-screen flex-col items-center justify-start space-y-8 overflow-hidden text-center md:justify-center xl:justify-center"
     >
-      <div className="absolute  bottom-28 flex h-14 w-64 items-center justify-evenly rounded-md bg-zinc-700/20 md:left-0 md:h-64 md:w-14 md:flex-col md:rounded-l-none md:rounded-r-md xl:left-0 xl:top-96 xl:h-64 xl:w-14 xl:flex-col xl:rounded-l-none xl:rounded-r-md">
+      <div className="absolute  bottom-32 flex h-14 w-64 flex-row items-center justify-evenly rounded-md bg-zinc-700/20 md:left-0 md:h-64 md:w-14 md:flex-col md:rounded-l-none md:rounded-r-md xl:left-0 xl:top-96 xl:h-64 xl:w-14  xl:rounded-l-none xl:rounded-r-md">
         <a href="https://www.linkedin.com/in/pdrohm/" target="_blank">
           <FaLinkedin className="logo-socials hover:text-[#0D62BC]" />
         </a>
