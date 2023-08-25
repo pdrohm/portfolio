@@ -16,7 +16,7 @@ type Inputs = {
 };
 
 export default function Contact({}: Props) {
-  const { isEngActive } = useLanguage();
+  const { isEnglish } = useLanguage();
   const [width] = useWindowSize();
   const isSmallScreen = width <= 640; // Small screens have a width of less than 640px
 
@@ -31,7 +31,7 @@ export default function Contact({}: Props) {
       className="h-screen flex relative flex-col text-center md:text-left items-center md:flex-row max-w-7xl px-10 mx-auto justify-evenly"
     >
       <h2 className="title-section">
-        {isEngActive ? ContactText.mainTitle.en : ContactText.mainTitle.br}
+        {isEnglish ? ContactText.mainTitle.en : ContactText.mainTitle.br}
       </h2>
       <div className="flex flex-col space-y-8 items-center">
         <motion.h3
@@ -42,13 +42,11 @@ export default function Contact({}: Props) {
           className="xl:text-3xl md:text-3xl text-lg text-center"
         >
           <span className="font-semibold">
-            {isEngActive
-              ? ContactText.interested.en
-              : ContactText.interested.br}
+            {isEnglish ? ContactText.interested.en : ContactText.interested.br}
           </span>{" "}
-          {isEngActive ? ContactText.feel.en : ContactText.feel.br}
+          {isEnglish ? ContactText.feel.en : ContactText.feel.br}
           <span className=" font-semibold underline decoration-blue">
-            {isEngActive ? ContactText.contact.en : ContactText.contact.br}
+            {isEnglish ? ContactText.contact.en : ContactText.contact.br}
           </span>
         </motion.h3>
         <motion.div
@@ -72,7 +70,7 @@ export default function Contact({}: Props) {
             <MapPinIcon className="text-blue xl:h-8 xl:w-8 md:h-8 md:w-8 w-5 h-5 animate-pulse" />
             <p className="xl:text-2xl md:text-2xl text-sm">
               Tubarão, SC.{" "}
-              {isEngActive ? ContactText.country.en : ContactText.country.br}.
+              {isEnglish ? ContactText.country.en : ContactText.country.br}.
             </p>
           </div>
         </motion.div>
@@ -88,7 +86,7 @@ export default function Contact({}: Props) {
                 className="contact-input xl:w-auto md:w-auto w-1/2 "
                 type="text"
                 placeholder={
-                  isEngActive
+                  isEnglish
                     ? ContactText.form.name.en
                     : ContactText.form.name.br
                 }
@@ -105,7 +103,7 @@ export default function Contact({}: Props) {
               className="contact-input "
               type="text"
               placeholder={
-                isEngActive
+                isEnglish
                   ? ContactText.form.subject.en
                   : ContactText.form.subject.br
               }
@@ -113,7 +111,7 @@ export default function Contact({}: Props) {
             <textarea
               className="contact-input"
               placeholder={
-                isEngActive
+                isEnglish
                   ? ContactText.form.message.en
                   : ContactText.form.message.br
               }
@@ -123,7 +121,7 @@ export default function Contact({}: Props) {
               className="bg-blue py-5 px-10 rounded-md text-black font-semibold text-lg"
               type="submit"
             >
-              {isEngActive
+              {isEnglish
                 ? ContactText.form.button.en
                 : ContactText.form.button.br}
             </button>
@@ -143,7 +141,7 @@ export default function Contact({}: Props) {
                 className="contact-input xl:w-full md:w-full w-1/2 "
                 type="text"
                 placeholder={
-                  isEngActive
+                  isEnglish
                     ? ContactText.form.name.en
                     : ContactText.form.name.br
                 }
@@ -160,7 +158,7 @@ export default function Contact({}: Props) {
               className="contact-input "
               type="text"
               placeholder={
-                isEngActive
+                isEnglish
                   ? ContactText.form.subject.en
                   : ContactText.form.subject.br
               }
@@ -168,7 +166,7 @@ export default function Contact({}: Props) {
             <textarea
               className="contact-input"
               placeholder={
-                isEngActive
+                isEnglish
                   ? ContactText.form.message.en
                   : ContactText.form.message.br
               }
@@ -178,7 +176,7 @@ export default function Contact({}: Props) {
               className="bg-blue py-5 px-10 rounded-md text-black font-semibold text-lg"
               type="submit"
             >
-              {isEngActive
+              {isEnglish
                 ? ContactText.form.button.en
                 : ContactText.form.button.br}
             </button>

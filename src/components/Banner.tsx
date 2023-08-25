@@ -9,10 +9,10 @@ import { BannerText } from "@/exports/Texts";
 type Props = {};
 
 export default function Banner({}: Props) {
-  const { isEngActive } = useLanguage();
+  const { isEnglish } = useLanguage();
 
   const [text, count] = useTypewriter({
-    words: isEngActive ? BannerText.wordsWriter.en : BannerText.wordsWriter.br,
+    words: isEnglish ? BannerText.wordsWriter.en : BannerText.wordsWriter.br,
     loop: true,
     delaySpeed: 2200,
   });
@@ -43,7 +43,7 @@ export default function Banner({}: Props) {
       />
       <div>
         <h2 className="text-sm xl:text-lg uppercase text-zinc-700 dark:text-zinc-400 pb-2 tracking-[15px]">
-          {isEngActive ? BannerText.role.en : BannerText.role.br}
+          {isEnglish ? BannerText.role.en : BannerText.role.br}
         </h2>
         <h2 className="text-3xl lg:text-5xl scroll-px-10">
           <span className="mr-4 dark:text-zinc-200 text-zinc-800">{text}</span>

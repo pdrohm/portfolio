@@ -10,7 +10,7 @@ type Props = {
 };
 
 export default function ExperienceCard({ company }: Props) {
-  const { isEngActive } = useLanguage();
+  const { isEnglish } = useLanguage();
 
   const filteredIcons = techsIcon.filter((icon) =>
     company.technologies.includes(icon.name)
@@ -23,12 +23,10 @@ export default function ExperienceCard({ company }: Props) {
     );
   };
 
-  const activities = isEngActive
-    ? company.activities.en
-    : company.activities.br;
+  const activities = isEnglish ? company.activities.en : company.activities.br;
 
   const duration = company.actual
-    ? isEngActive
+    ? isEnglish
       ? company.duration + " current work"
       : company.duration + " atualmente"
     : company.duration;
@@ -48,7 +46,7 @@ export default function ExperienceCard({ company }: Props) {
           <div className="flex items-center flex-col text-start">
             <h3 className="text-2xl xl:text-3xl md:text-3xl font-light">
               {" "}
-              {isEngActive ? company.role.en : company.role.br}
+              {isEnglish ? company.role.en : company.role.br}
             </h3>
             <p className="font-semibold text-xl mt-2">{company.name}</p>
           </div>

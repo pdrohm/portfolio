@@ -9,15 +9,15 @@ function classNames(...classes: any) {
 }
 
 function NavList() {
-  const { isEngActive } = useLanguage();
+  const { isEnglish } = useLanguage();
 
   const links = [
-    { href: "#home", label: isEngActive ? "Home" : "Início" },
-    { href: "#about", label: isEngActive ? "About" : "Sobre" },
-    { href: "#experience", label: isEngActive ? "Experience" : "Experiência" },
-    { href: "#skills", label: isEngActive ? "Skills" : "Habilidades" },
-    { href: "#projects", label: isEngActive ? "Projects" : "Projetos" },
-    { href: "#contact", label: isEngActive ? "Contact" : "Contato" },
+    { href: "#home", label: isEnglish ? "Home" : "Início" },
+    { href: "#about", label: isEnglish ? "About" : "Sobre" },
+    { href: "#experience", label: isEnglish ? "Experience" : "Experiência" },
+    { href: "#skills", label: isEnglish ? "Skills" : "Habilidades" },
+    { href: "#projects", label: isEnglish ? "Projects" : "Projetos" },
+    { href: "#contact", label: isEnglish ? "Contact" : "Contato" },
   ];
   return (
     <Menu as="div" className="absolute inline-block text-left left-4 top-10">

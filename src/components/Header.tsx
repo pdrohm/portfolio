@@ -9,7 +9,7 @@ import NavList from "./NavList";
 type Props = {};
 
 export default function Header({}: Props) {
-  const { isEngActive } = useLanguage();
+  const { isEnglish } = useLanguage();
 
   const [width] = useWindowSize();
   const isSmallScreen = width <= 700;
@@ -29,20 +29,18 @@ export default function Header({}: Props) {
         <div className="pt-6 flex flex-row  ">
           <Link href="#home">
             <button className="nav-btn">
-              {isEngActive ? BannerText.tabs.home.en : BannerText.tabs.home.br}
+              {isEnglish ? BannerText.tabs.home.en : BannerText.tabs.home.br}
             </button>
           </Link>
           <Link href="#about">
             <button className="nav-btn">
-              {isEngActive
-                ? BannerText.tabs.about.en
-                : BannerText.tabs.about.br}
+              {isEnglish ? BannerText.tabs.about.en : BannerText.tabs.about.br}
             </button>
           </Link>
 
           <Link href="#experience">
             <button className="nav-btn">
-              {isEngActive
+              {isEnglish
                 ? BannerText.tabs.experience.en
                 : BannerText.tabs.experience.br}
             </button>
@@ -50,7 +48,7 @@ export default function Header({}: Props) {
 
           <Link href="#skills">
             <button className="nav-btn">
-              {isEngActive
+              {isEnglish
                 ? BannerText.tabs.skills.en
                 : BannerText.tabs.skills.br}
             </button>
@@ -58,7 +56,7 @@ export default function Header({}: Props) {
 
           <Link href="#projects">
             <button className="nav-btn">
-              {isEngActive
+              {isEnglish
                 ? BannerText.tabs.projects.en
                 : BannerText.tabs.projects.br}
             </button>
@@ -66,7 +64,7 @@ export default function Header({}: Props) {
 
           <Link href="#contact">
             <button className="nav-btn">
-              {isEngActive
+              {isEnglish
                 ? BannerText.tabs.contact.en
                 : BannerText.tabs.contact.br}
             </button>

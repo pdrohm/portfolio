@@ -13,7 +13,7 @@ type Props = {
 };
 
 export default function Project({ index, project, length }: Props) {
-  const { isEngActive } = useLanguage();
+  const { isEnglish } = useLanguage();
 
   const filteredIcons = techsIcon.filter((icon) =>
     project.techs.includes(icon.name)
@@ -37,7 +37,7 @@ export default function Project({ index, project, length }: Props) {
         </h3>
 
         <p className="text-center md:text-left lg:text-lg text-sm leading-tight overflow-y-auto max-h-80 px-9">
-          {isEngActive ? project.descriptionEn : project.descriptionBr}
+          {isEnglish ? project.descriptionEn : project.descriptionBr}
         </p>
 
         <div className="flex justify-end xl:flex-row md:flex-row flex-col">
@@ -63,7 +63,7 @@ export default function Project({ index, project, length }: Props) {
             >
               <FaGithub className="text-zinc-200" />
               <span className="ml-1 text-zinc-200">
-                {isEngActive ? ProjectText.code.en : ProjectText.code.br}
+                {isEnglish ? ProjectText.code.en : ProjectText.code.br}
               </span>
             </button>
             <button
@@ -72,7 +72,7 @@ export default function Project({ index, project, length }: Props) {
             >
               <FaPlusCircle />
               <span className="ml-1">
-                {isEngActive ? ProjectText.more.en : ProjectText.more.br}
+                {isEnglish ? ProjectText.more.en : ProjectText.more.br}
               </span>
             </button>
           </div>

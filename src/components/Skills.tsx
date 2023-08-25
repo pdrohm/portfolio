@@ -8,7 +8,7 @@ import { SkillsText } from "@/exports/Texts";
 type Props = {};
 
 export default function Skills({}: Props) {
-  const { isEngActive } = useLanguage();
+  const { isEnglish } = useLanguage();
 
   return (
     <motion.div
@@ -20,7 +20,7 @@ export default function Skills({}: Props) {
       className=" flex flex-col relative snap-start xl:flex-row h-screen text-center justify-evenly items-center max-w-[2000px] xl:px-9 min-h-screen xl:space-y-0 mx-auto"
     >
       <h3 className="title-section top-40 lg:top-20 md:top-20">
-        {isEngActive ? SkillsText.mainTitle.en : SkillsText.mainTitle.br}
+        {isEnglish ? SkillsText.mainTitle.en : SkillsText.mainTitle.br}
       </h3>
 
       <div className="grid grid-cols-4 gap-5">

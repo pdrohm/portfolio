@@ -7,7 +7,7 @@ import { AboutText } from "../exports/Texts";
 type Props = {};
 
 export default function About({}: Props) {
-  const { isEngActive } = useLanguage();
+  const { isEnglish } = useLanguage();
 
   return (
     <motion.div
@@ -19,7 +19,7 @@ export default function About({}: Props) {
     >
       <div className="flex justify-center items-center">
         <h2 className="title-section text-white">
-          {isEngActive ? AboutText.mainTitle.en : AboutText.mainTitle.br}
+          {isEnglish ? AboutText.mainTitle.en : AboutText.mainTitle.br}
         </h2>
       </div>
       <div className="flex flex-col  relative  text-center md:text-left md:flex-row max-w-6xl px-11 justify-evenly mx-auto items-center">
@@ -34,10 +34,10 @@ export default function About({}: Props) {
         />
         <div className="flex flex-col items-center justify-center p-8 text-justify bg-backgroundLight dark:bg-backgroundDark rounded-xl  sm:mb-16">
           <h2 className="dark:text-zinc-300 text-zinc-800 font-semibold text-4xl ">
-            {isEngActive ? AboutText.title.en : AboutText.title.br}
+            {isEnglish ? AboutText.title.en : AboutText.title.br}
           </h2>
           <p className="text-clip text-zinc-950 dark:text-zinc-100">
-            {isEngActive ? AboutText.paragraph.en : AboutText.paragraph.br}
+            {isEnglish ? AboutText.paragraph.en : AboutText.paragraph.br}
           </p>
         </div>
       </div>

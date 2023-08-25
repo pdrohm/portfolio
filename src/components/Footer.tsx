@@ -6,7 +6,7 @@ import { useLanguage } from "../context/LanguageProvider";
 type Props = {};
 
 export default function Footer({}: Props) {
-  const { isEngActive } = useLanguage();
+  const { isEnglish } = useLanguage();
 
   return (
     <div className="flex bg-zinc-800 dark:bg-zinc-300 text-zinc-200 dark:text-zinc-900 h-auto flex-col  ">
@@ -16,13 +16,13 @@ export default function Footer({}: Props) {
             Pedro H. Marques
           </h3>
           <p className="h-5  xl:text-md md:text-md text-sm w-96">
-            {isEngActive ? FooterText.paragraph.en : FooterText.paragraph.br}
+            {isEnglish ? FooterText.paragraph.en : FooterText.paragraph.br}
           </p>
         </div>
 
         <div className="flex flex-col items-center xl:items-start md:items-start">
           <h3 className="xl:text-2xl md:text-2xl text-lg xl:mb-8 md:mb-8 mb-8 uppercase h-5">
-            {isEngActive ? FooterText.socials.en : FooterText.socials.br}
+            {isEnglish ? FooterText.socials.en : FooterText.socials.br}
           </h3>
           <div className="flex flex-row justify-start xl:mb-0 md:mb-0 mb-5 ">
             <a
@@ -58,7 +58,7 @@ export default function Footer({}: Props) {
       </div>
       <div className="flex justify-center items-center h-10">
         <p className="text-[11px]">
-          {isEngActive ? FooterText.madeBy.en : FooterText.madeBy.br}
+          {isEnglish ? FooterText.madeBy.en : FooterText.madeBy.br}
           <span className="underline">
             <a href="#home">Pedro H. Marques.</a>
           </span>

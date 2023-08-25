@@ -15,7 +15,7 @@ export type project = {
   liveLink: string;
 };
 export default function Projects({}: Props) {
-  const { isEngActive } = useLanguage();
+  const { isEnglish } = useLanguage();
 
   const projs: project[] = [
     {
@@ -49,7 +49,7 @@ export default function Projects({}: Props) {
       className="relative flex justify-evenly flex-col items-center text-left  mx-auto z-1"
     >
       <h2 className="title-section top-0">
-        {isEngActive ? ProjectsText.mainTitle.en : ProjectsText.mainTitle.br}
+        {isEnglish ? ProjectsText.mainTitle.en : ProjectsText.mainTitle.br}
       </h2>
 
       <div className="relative flex z-20 flex-col">
