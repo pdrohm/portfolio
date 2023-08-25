@@ -6,10 +6,21 @@ import "swiper/css";
 import "swiper/css/navigation";
 import { companies } from "@/exports/companies";
 import ExperienceCard from "./ExperienceCard";
+import { ExperienceText } from "@/exports/Texts";
+import { useLanguage } from "@/context/LanguageProvider";
 
 function Experience() {
+  const { isEnglish } = useLanguage();
+
   return (
-    <div className="flex h-screen items-center justify-center" id="experience">
+    <div
+      className="relative flex h-screen items-center justify-center"
+      id="experience"
+    >
+      <h2 className="title-section">
+        {" "}
+        {isEnglish ? ExperienceText.mainTitle.en : ExperienceText.mainTitle.br}
+      </h2>
       <Swiper
         spaceBetween={10}
         navigation={true}
