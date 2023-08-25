@@ -20,10 +20,15 @@ type ThemeProviderProps = {
 };
 
 const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
-  const [isDarkMode, setIsDarkMode] = useState(true);
+  const storedTheme =
+    typeof window !== "undefined" ? localStorage.getItem("theme") : null;
+  const initialIsDarkMode = storedTheme === "dark";
+
+  const [isDarkMode, setIsDarkMode] = useState(initialIsDarkMode);
+
   const [theme, setTheme] = useState(() => {
     if (typeof window !== "undefined") {
-      return localStorage.theme || "dark";
+      return localStorage.getItem("theme") || "dark";
     }
     return "dark";
   });
@@ -32,14 +37,14 @@ const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
 
   useEffect(() => {
     const root = window.document.documentElement;
-    root.classList.remove(colorTheme);
+    root.classList.remove("light", "dark");
     root.classList.add(theme);
     localStorage.setItem("theme", theme);
-  }, [theme, colorTheme]);
+  }, [theme]);
 
   const toggleTheme = () => {
     setIsDarkMode(!isDarkMode);
-    document.documentElement.classList.toggle("dark");
+    setTheme(isDarkMode ? "light" : "dark");
   };
 
   const contextValue: ThemeContextType = {

@@ -6,6 +6,8 @@ import { BsFillSunFill, BsFillMoonFill } from "react-icons/bs";
 const ThemeToggle: React.FC = () => {
   const { isDarkMode, toggleTheme } = useTheme();
 
+  console.log("isDarkMode", isDarkMode);
+
   return (
     <div
       className="flex items-center justify-center cursor-pointer rounded-full bg-black dark:bg-white w-8 h-8"
