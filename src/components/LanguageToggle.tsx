@@ -5,22 +5,22 @@ const LanguageToggle: React.FC = () => {
   const { isEnglish, toggleLanguage } = useLanguage();
 
   return (
-    <div className="flex items-center cursor-pointer">
+    <div className="flex cursor-pointer items-center">
       <div
-        className={`relative rounded-full w-14 h-8 transition-colors duration-300 ${
+        className={`relative h-8 w-14 rounded-full transition-colors duration-300 ${
           isEnglish ? "bg-[#dd3127]" : "bg-[#029639]"
         }`}
         onClick={toggleLanguage}
       >
         <div
-          className={`absolute top-0 left-0 w-8 h-8 bg-white rounded-full shadow-md transform transition-transform duration-300 flex items-center justify-center ${
+          className={`absolute left-0 top-0 flex h-8 w-8 transform items-center justify-center rounded-full bg-white shadow-md transition-transform duration-300 ${
             isEnglish ? "translate-x-6" : "translate-x-0"
           }`}
         >
           <img
             src={isEnglish ? "rounded-en.svg" : "rounded-br.svg"}
             alt={isEnglish ? "English option" : "Brazilian option"}
-            className="w-10 h-10 m-1 rounded-full"
+            className="m-1 h-10 w-10 rounded-full"
           />
         </div>
       </div>

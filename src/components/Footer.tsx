@@ -9,22 +9,22 @@ export default function Footer({}: Props) {
   const { isEnglish } = useLanguage();
 
   return (
-    <div className="flex bg-zinc-800 dark:bg-zinc-300 text-zinc-200 dark:text-zinc-900 h-auto flex-col  ">
-      <div className="flex xl:flex-row md:flex-row flex-col border-b-[1px] items-center justify-between mx-auto border-zinc-800 mb-10 xl:w-2/3 md:2/3">
-        <div className="h-72 flex flex-col xl:items-start md:items-start items-center justify-center">
-          <h3 className="text-start xl:text-2xl md:text-2xl text-lg mb-5 uppercase">
+    <div className="flex h-auto flex-col bg-zinc-800 text-zinc-200 dark:bg-zinc-300 dark:text-zinc-900  ">
+      <div className="md:2/3 mx-auto mb-10 flex flex-col items-center justify-between border-b-[1px] border-zinc-800 md:flex-row xl:w-2/3 xl:flex-row">
+        <div className="flex h-72 flex-col items-center justify-center md:items-start xl:items-start">
+          <h3 className="mb-5 text-start text-lg uppercase md:text-2xl xl:text-2xl">
             Pedro H. Marques
           </h3>
-          <p className="h-5  xl:text-md md:text-md text-sm w-96">
+          <p className="xl:text-md  md:text-md h-5 w-96 text-sm">
             {isEnglish ? FooterText.paragraph.en : FooterText.paragraph.br}
           </p>
         </div>
 
-        <div className="flex flex-col items-center xl:items-start md:items-start">
-          <h3 className="xl:text-2xl md:text-2xl text-lg xl:mb-8 md:mb-8 mb-8 uppercase h-5">
+        <div className="flex flex-col items-center md:items-start xl:items-start">
+          <h3 className="mb-8 h-5 text-lg uppercase md:mb-8 md:text-2xl xl:mb-8 xl:text-2xl">
             {isEnglish ? FooterText.socials.en : FooterText.socials.br}
           </h3>
-          <div className="flex flex-row justify-start xl:mb-0 md:mb-0 mb-5 ">
+          <div className="mb-5 flex flex-row justify-start md:mb-0 xl:mb-0 ">
             <a
               href="https://www.linkedin.com/in/pdrohm/"
               target="_blank"
@@ -44,19 +44,19 @@ export default function Footer({}: Props) {
               target="_blank"
               className="container-socials"
             >
-              <FaInstagram className="logo-socials hover:text-zinc-50 hover:bg-[#da4467]" />
+              <FaInstagram className="logo-socials hover:bg-[#da4467] hover:text-zinc-50" />
             </a>
             <a
               href="https://wa.link/6wde9g"
               target="_blank"
               className="container-socials"
             >
-              <FaWhatsapp className="logo-socials hover:text-zinc-50 hover:bg-[#12950b]" />
+              <FaWhatsapp className="logo-socials hover:bg-[#12950b] hover:text-zinc-50" />
             </a>
           </div>
         </div>
       </div>
-      <div className="flex justify-center items-center h-10">
+      <div className="flex h-10 items-center justify-center">
         <p className="text-[11px]">
           {isEnglish ? FooterText.madeBy.en : FooterText.madeBy.br}
           <span className="underline">

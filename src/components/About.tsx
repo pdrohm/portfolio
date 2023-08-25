@@ -15,25 +15,25 @@ export default function About({}: Props) {
       whileInView={{ opacity: 1 }}
       transition={{ duration: 2 }}
       id="about"
-      className="flex relative flex-col items-center justify-evenly h-screen bg-bg1 bg-cover"
+      className="relative flex h-screen flex-col items-center justify-evenly bg-bg1 bg-cover"
     >
-      <div className="flex justify-center items-center">
+      <div className="flex items-center justify-center">
         <h2 className="title-section text-white">
           {isEnglish ? AboutText.mainTitle.en : AboutText.mainTitle.br}
         </h2>
       </div>
-      <div className="flex flex-col  relative  text-center md:text-left md:flex-row max-w-6xl px-11 justify-evenly mx-auto items-center">
+      <div className="relative mx-auto flex max-w-6xl flex-col items-center justify-evenly px-11 text-center md:flex-row md:text-left">
         <motion.img
           initial={{ opacity: 0, x: -200 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 1.3 }}
           viewport={{ once: true }}
-          className="relative md:rounded-xl rounded-full mx-auto object-cover md:w-96 md:mr-20 md:h-96 w-44 h-44"
+          className="relative mx-auto h-44 w-44 rounded-full object-cover md:mr-20 md:h-96 md:w-96 md:rounded-xl"
           src="/perfil.jpg"
           alt="PH Picture"
         />
-        <div className="flex flex-col items-center justify-center p-8 text-justify bg-backgroundLight dark:bg-backgroundDark rounded-xl  sm:mb-16">
-          <h2 className="dark:text-zinc-300 text-zinc-800 font-semibold text-4xl ">
+        <div className="flex flex-col items-center justify-center rounded-xl bg-backgroundLight p-8 text-justify dark:bg-backgroundDark  sm:mb-16">
+          <h2 className="text-4xl font-semibold text-zinc-800 dark:text-zinc-300 ">
             {isEnglish ? AboutText.title.en : AboutText.title.br}
           </h2>
           <p className="text-clip text-zinc-950 dark:text-zinc-100">

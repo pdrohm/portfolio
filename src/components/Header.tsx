@@ -17,16 +17,16 @@ export default function Header({}: Props) {
   console.log("width", width);
 
   return (
-    <header className="flex flex-row justify-evenly sticky top-0 w-full z-50 items-center  dark:bg-backgroundDark bg-backgroundLight dark:text-zinc-200 h-24">
+    <header className="sticky top-0 z-50 flex h-24 w-full flex-row items-center  justify-evenly bg-backgroundLight dark:bg-backgroundDark dark:text-zinc-200">
       <a href="#home">
-        <div className="flex items-end justify-evenly cursor-pointer">
+        <div className="flex cursor-pointer items-end justify-evenly">
           <img src="./ph.png" className="w-12" alt="Logo of Pedro Picture" />
           <span className="ml-4 hidden sm:block">Pedro H. Marques</span>
         </div>
       </a>
 
       {!isSmallScreen ? (
-        <div className="pt-6 flex flex-row  ">
+        <div className="flex flex-row pt-6  ">
           <Link href="#home">
             <button className="nav-btn">
               {isEnglish ? BannerText.tabs.home.en : BannerText.tabs.home.br}

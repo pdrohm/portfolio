@@ -28,18 +28,18 @@ export default function Contact({}: Props) {
   return (
     <div
       id="contact"
-      className="h-screen flex relative flex-col text-center md:text-left items-center md:flex-row max-w-7xl px-10 mx-auto justify-evenly"
+      className="relative mx-auto flex h-screen max-w-7xl flex-col items-center justify-evenly px-10 text-center md:flex-row md:text-left"
     >
       <h2 className="title-section">
         {isEnglish ? ContactText.mainTitle.en : ContactText.mainTitle.br}
       </h2>
-      <div className="flex flex-col space-y-8 items-center">
+      <div className="flex flex-col items-center space-y-8">
         <motion.h3
           initial={{ opacity: 0, y: -250 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 2 }}
           viewport={{ once: true }}
-          className="xl:text-3xl md:text-3xl text-lg text-center"
+          className="text-center text-lg md:text-3xl xl:text-3xl"
         >
           <span className="font-semibold">
             {isEnglish ? ContactText.interested.en : ContactText.interested.br}
@@ -57,18 +57,18 @@ export default function Contact({}: Props) {
           className="flex flex-col items-start space-y-3"
         >
           <div className="flex items-center justify-center space-x-4">
-            <EnvelopeIcon className="text-blue xl:h-8 xl:w-8 md:h-8 md:w-8 w-5 h-5 animate-pulse" />
-            <p className="xl:text-2xl md:text-2xl text-sm">
+            <EnvelopeIcon className="h-5 w-5 animate-pulse text-blue md:h-8 md:w-8 xl:h-8 xl:w-8" />
+            <p className="text-sm md:text-2xl xl:text-2xl">
               opedrohenriquemarques@gmail.com
             </p>
           </div>
           <div className="flex items-center justify-center space-x-4">
-            <PhoneIcon className="text-blue xl:h-8 xl:w-8 md:h-8 md:w-8 w-5 h-5 animate-pulse" />
-            <p className="xl:text-2xl md:text-2xl text-sm">+5548991500793</p>
+            <PhoneIcon className="h-5 w-5 animate-pulse text-blue md:h-8 md:w-8 xl:h-8 xl:w-8" />
+            <p className="text-sm md:text-2xl xl:text-2xl">+5548991500793</p>
           </div>
           <div className="flex items-center justify-center space-x-4">
-            <MapPinIcon className="text-blue xl:h-8 xl:w-8 md:h-8 md:w-8 w-5 h-5 animate-pulse" />
-            <p className="xl:text-2xl md:text-2xl text-sm">
+            <MapPinIcon className="h-5 w-5 animate-pulse text-blue md:h-8 md:w-8 xl:h-8 xl:w-8" />
+            <p className="text-sm md:text-2xl xl:text-2xl">
               Tubarão, SC.{" "}
               {isEnglish ? ContactText.country.en : ContactText.country.br}.
             </p>
@@ -78,12 +78,12 @@ export default function Contact({}: Props) {
         {isSmallScreen ? (
           <form
             onSubmit={handleSubmit(onSubmit)}
-            className="flex flex-col space-y-3 w-full mx-auto"
+            className="mx-auto flex w-full flex-col space-y-3"
           >
             <div className="flex space-x-3 ">
               <input
                 {...register("name")}
-                className="contact-input xl:w-auto md:w-auto w-1/2 "
+                className="contact-input w-1/2 md:w-auto xl:w-auto "
                 type="text"
                 placeholder={
                   isEnglish
@@ -93,7 +93,7 @@ export default function Contact({}: Props) {
               />
               <input
                 {...register("email")}
-                className="contact-input xl:w-auto md:w-auto w-1/2"
+                className="contact-input w-1/2 md:w-auto xl:w-auto"
                 type="email"
                 placeholder="Email"
               />
@@ -118,7 +118,7 @@ export default function Contact({}: Props) {
             />
             <button
               {...register("message")}
-              className="bg-blue py-5 px-10 rounded-md text-black font-semibold text-lg"
+              className="rounded-md bg-blue px-10 py-5 text-lg font-semibold text-black"
               type="submit"
             >
               {isEnglish
@@ -133,12 +133,12 @@ export default function Contact({}: Props) {
             transition={{ duration: 2 }}
             viewport={{ once: true }}
             onSubmit={handleSubmit(onSubmit)}
-            className="flex flex-col space-y-3 w-full mx-auto"
+            className="mx-auto flex w-full flex-col space-y-3"
           >
             <div className="flex space-x-3 ">
               <input
                 {...register("name")}
-                className="contact-input xl:w-full md:w-full w-1/2 "
+                className="contact-input w-1/2 md:w-full xl:w-full "
                 type="text"
                 placeholder={
                   isEnglish
@@ -148,7 +148,7 @@ export default function Contact({}: Props) {
               />
               <input
                 {...register("email")}
-                className="contact-input xl:w-full md:w-full w-1/2"
+                className="contact-input w-1/2 md:w-full xl:w-full"
                 type="email"
                 placeholder="Email"
               />
@@ -173,7 +173,7 @@ export default function Contact({}: Props) {
             />
             <button
               {...register("message")}
-              className="bg-blue py-5 px-10 rounded-md text-black font-semibold text-lg"
+              className="rounded-md bg-blue px-10 py-5 text-lg font-semibold text-black"
               type="submit"
             >
               {isEnglish

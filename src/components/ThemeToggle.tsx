@@ -10,7 +10,7 @@ const ThemeToggle: React.FC = () => {
 
   return (
     <div
-      className="flex items-center justify-center cursor-pointer rounded-full bg-black dark:bg-white w-8 h-8"
+      className="flex h-8 w-8 cursor-pointer items-center justify-center rounded-full bg-black dark:bg-white"
       onClick={toggleTheme}
     >
       {isDarkMode ? (

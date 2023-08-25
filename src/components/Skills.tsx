@@ -17,16 +17,16 @@ export default function Skills({}: Props) {
       transition={{ duration: 2 }}
       viewport={{ once: true }}
       id="skills"
-      className=" flex flex-col relative snap-start xl:flex-row h-screen text-center justify-evenly items-center max-w-[2000px] xl:px-9 min-h-screen xl:space-y-0 mx-auto"
+      className="relative mx-auto flex h-screen min-h-screen max-w-[2000px] snap-start flex-col items-center justify-evenly text-center xl:flex-row xl:space-y-0 xl:px-9"
     >
-      <h3 className="title-section top-40 lg:top-20 md:top-20">
+      <h3 className="title-section top-40 md:top-20 lg:top-20">
         {isEnglish ? SkillsText.mainTitle.en : SkillsText.mainTitle.br}
       </h3>
 
       <div className="grid grid-cols-4 gap-5">
         {techsIcon.map(
           (tech) =>
-            tech.show && <SkillTag key={tech.name} tech={tech} left={true} />
+            tech.show && <SkillTag key={tech.name} tech={tech} left={true} />,
         )}
       </div>
     </motion.div>

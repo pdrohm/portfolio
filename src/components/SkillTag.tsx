@@ -22,24 +22,25 @@ export default function SkillTag({ left, tech }: Props) {
     <div className="group relative flex cursor-pointer">
       {isSmallScreen ? (
         <img
-          className="border border-gray-600 rounded-full object-cover w-16 h-16 md:w-28  md:h-28 xl:w-32 xl:h-32 filter group-hover:grayscale transition duration-350 ease-in-out"
+          className="duration-350 h-16 w-16 rounded-full border border-gray-600 object-cover  filter transition ease-in-out group-hover:grayscale md:h-28 md:w-28 xl:h-32 xl:w-32"
           src={tech.src}
-          alt={`skill tag of ${tech.name}`}        />
+          alt={`skill tag of ${tech.name}`}
+        />
       ) : (
         <motion.img
           initial={{ opacity: 0, x: left ? -200 : 200 }}
           transition={{ duration: 1 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
-          className="border border-gray-600 rounded-full object-cover w-16 h-16 md:w-28  md:h-28 xl:w-32 xl:h-32 filter group-hover:grayscale transition duration-350 ease-in-out"
+          className="duration-350 h-16 w-16 rounded-full border border-gray-600 object-cover  filter transition ease-in-out group-hover:grayscale md:h-28 md:w-28 xl:h-32 xl:w-32"
           src={tech.src}
-          alt={`skill tag of ${tech.name}`}    
+          alt={`skill tag of ${tech.name}`}
         />
       )}
 
-      <div className="rounded-full absolute opacity-0 group-hover:opacity-80 transition duration-150 ease-in-out group-hover:bg-black/90 h-16 w-16 md:h-28 md:w-28 xl:w-32 xl:h-32 z-0">
-        <div className="flex items-center justify-center h-full">
-          <p className="text-zinc-50 font-semibold text-xl uppercase">
+      <div className="absolute z-0 h-16 w-16 rounded-full opacity-0 transition duration-150 ease-in-out group-hover:bg-black/90 group-hover:opacity-80 md:h-28 md:w-28 xl:h-32 xl:w-32">
+        <div className="flex h-full items-center justify-center">
+          <p className="text-xl font-semibold uppercase text-zinc-50">
             {tech.fullName}
           </p>
         </div>

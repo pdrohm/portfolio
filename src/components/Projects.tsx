@@ -46,13 +46,13 @@ export default function Projects({}: Props) {
   return (
     <div
       id="projects"
-      className="relative flex justify-evenly flex-col items-center text-left  mx-auto z-1"
+      className="z-1 relative mx-auto flex flex-col items-center  justify-evenly text-left"
     >
       <h2 className="title-section top-0">
         {isEnglish ? ProjectsText.mainTitle.en : ProjectsText.mainTitle.br}
       </h2>
 
-      <div className="relative flex z-20 flex-col">
+      <div className="relative z-20 flex flex-col">
         {projs.map((project, index) => (
           <Project
             key={index}
@@ -65,7 +65,7 @@ export default function Projects({}: Props) {
 
       <div
         id="faixa"
-        className="w-full absolute z-0 top-[20%] dark:bg-blue/10 bg-zinc-600/10 left-0 h-[500px] -skew-y-12"
+        className="absolute left-0 top-[20%] z-0 h-[500px] w-full -skew-y-12 bg-zinc-600/10 dark:bg-blue/10"
       ></div>
     </div>
   );

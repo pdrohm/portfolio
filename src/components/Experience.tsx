@@ -9,7 +9,7 @@ import ExperienceCard from "./ExperienceCard";
 
 function Experience() {
   return (
-    <div className="h-screen flex items-center justify-center" id="experience">
+    <div className="flex h-screen items-center justify-center" id="experience">
       <Swiper
         spaceBetween={10}
         navigation={true}

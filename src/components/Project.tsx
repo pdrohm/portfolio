@@ -16,7 +16,7 @@ export default function Project({ index, project, length }: Props) {
   const { isEnglish } = useLanguage();
 
   const filteredIcons = techsIcon.filter((icon) =>
-    project.techs.includes(icon.name)
+    project.techs.includes(icon.name),
   );
 
   const handleOpenLink = (link: string) => {
@@ -24,41 +24,41 @@ export default function Project({ index, project, length }: Props) {
   };
 
   return (
-    <div className="w-screen h-3/4 flex flex-col xl:flex-row md:flex-row space-y-5 items-center justify-start p-15 md:p-20 ">
+    <div className="p-15 flex h-3/4 w-screen flex-col items-center justify-start space-y-5 md:flex-row md:p-20 xl:flex-row ">
       <img
-        className="xl:w-1/2 md:w-1/2 w-auto h-auto"
+        className="h-auto w-auto md:w-1/2 xl:w-1/2"
         src={project.mockupArt}
         alt="Laptop and Mobile Mockup of the project"
       />
 
-      <div className="space-y-10 px-0 md:px-10 max-w-6xl">
-        <h3 className="xl:text-3xl text-xl text-center flex xl:flex-row md:flex-row flex-col items-center justify-center font-semibold">
+      <div className="max-w-6xl space-y-10 px-0 md:px-10">
+        <h3 className="flex flex-col items-center justify-center text-center text-xl font-semibold md:flex-row xl:flex-row xl:text-3xl">
           {project.title}
         </h3>
 
-        <p className="text-center md:text-left lg:text-lg text-sm leading-tight overflow-y-auto max-h-80 px-9">
+        <p className="max-h-80 overflow-y-auto px-9 text-center text-sm leading-tight md:text-left lg:text-lg">
           {isEnglish ? project.descriptionEn : project.descriptionBr}
         </p>
 
-        <div className="flex justify-end xl:flex-row md:flex-row flex-col">
-          <div className="flex items-center xl:justify-start md:justify-start justify-center w-full flex-wrap">
+        <div className="flex flex-col justify-end md:flex-row xl:flex-row">
+          <div className="flex w-full flex-wrap items-center justify-center md:justify-start xl:justify-start">
             {filteredIcons.map((icon) => (
               <div key={icon.name} className="group relative inline-block">
                 <img
                   src={icon.src}
                   alt={icon.alt}
-                  className="w-10 h-10 mx-2 transition-opacity duration-300 ease-in-out opacity-100 group-hover:opacity-50"
+                  className="mx-2 h-10 w-10 opacity-100 transition-opacity duration-300 ease-in-out group-hover:opacity-50"
                 />
-                <span className="absolute top-full left-1/2 -translate-x-1/2  dark:text-zinc-200 text-zinc-800 text-xs px-2 py-1 rounded opacity-0 transition-opacity duration-300 ease-in-out group-hover:opacity-100 mb-1">
+                <span className="absolute left-1/2 top-full mb-1  -translate-x-1/2 rounded px-2 py-1 text-xs text-zinc-800 opacity-0 transition-opacity duration-300 ease-in-out group-hover:opacity-100 dark:text-zinc-200">
                   {icon.name}
                 </span>
               </div>
             ))}
           </div>
 
-          <div className="flex xl:w-1/2 md:w-1/2 w-64 justify-center mx-auto xl:mt-0 md:mt-0 mt-5 ">
+          <div className="mx-auto mt-5 flex w-64 justify-center md:mt-0 md:w-1/2 xl:mt-0 xl:w-1/2 ">
             <button
-              className="cursor-pointer flex bg-black rounded-md p-2 items-center justify-center mr-5 w-32 h-12 "
+              className="mr-5 flex h-12 w-32 cursor-pointer items-center justify-center rounded-md bg-black p-2 "
               onClick={() => handleOpenLink(project.githubLink)}
             >
               <FaGithub className="text-zinc-200" />
@@ -68,7 +68,7 @@ export default function Project({ index, project, length }: Props) {
             </button>
             <button
               onClick={() => handleOpenLink(project.liveLink)}
-              className="cursor-pointer flex bg-blue rounded-md p-2 items-center justify-center w-32 h-12"
+              className="flex h-12 w-32 cursor-pointer items-center justify-center rounded-md bg-blue p-2"
             >
               <FaPlusCircle />
               <span className="ml-1">
