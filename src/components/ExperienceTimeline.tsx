@@ -28,7 +28,7 @@ export default function ExperienceTimeline() {
   }
 
   return (
-    <div className="mt relative flex justify-center">
+    <div className="mt relative flex justify-center" id="experience">
       <h2 className="title-section underline decoration-[#a1a1aa] underline-offset-8 ">
         {title}
       </h2>
