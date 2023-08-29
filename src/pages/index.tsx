@@ -9,15 +9,16 @@ import LanguageToggle from "../components/LanguageToggle";
 import Experience from "../components/Experience";
 import ThemeToggle from "../components/ThemeToggle";
 import Toggles from "../components/Toggles";
+import ExperienceTimeline from "@/components/ExperienceTimeline";
 
 export default function Home() {
   return (
-    <div className="relative dark-mode bg-backgroundLight dark:bg-backgroundDark dark:text-zinc-200 text-zinc-900 h-screen overflow-y-scroll overflow-x-hidden scrollbar scrollbar-track-zinc-700/20 scrollbar-thumb-zinc-700/90 z-0  ">
+    <div className="dark-mode relative z-0 h-screen overflow-x-hidden overflow-y-scroll bg-backgroundLight text-zinc-900 scrollbar scrollbar-track-zinc-700/20 scrollbar-thumb-zinc-700/90 dark:bg-backgroundDark dark:text-zinc-200  ">
       <Header />
       <Toggles />
       <Banner />
       <About />
-      <Experience />
+      <ExperienceTimeline />
       <Skills />
       <Projects />
       <Contact />

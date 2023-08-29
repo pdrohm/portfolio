@@ -20,6 +20,8 @@ module.exports = {
         blue: "#0d80bf",
         backgroundDark: "rgb(36,36,36)",
         backgroundLight: "#FAFAFA",
+        light_secondary: "#D6D9DE",
+        dark_secondary: "#3E4145",
       },
     },
   },

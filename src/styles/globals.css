@@ -2,39 +2,33 @@
 @tailwind components;
 @tailwind utilities;
 
-
-
-@layer base{
+@layer base {
   body {
-      @apply dark:bg-gray-800 bg-white font-roboto
+    @apply bg-white font-roboto dark:bg-gray-800;
   }
 }
 
 @layer components {
-
   .nav-btn {
-    @apply lg:px-6 px-2 py-2 border-[#242424] rounded-full text-base  capitalize tracking-widest text-zinc-900 dark:text-zinc-200 transition-all hover:border-[#0d80bf]/30 hover:text-[#0d80bf]/30 dark:hover:border-[#0d80bf]/30 dark:hover:text-[#0d80bf]/30
+    @apply rounded-full border-[#242424] px-2 py-2 text-base capitalize  tracking-widest text-zinc-900 transition-all hover:border-[#0d80bf]/30 hover:text-[#0d80bf]/30 dark:text-zinc-200 dark:hover:border-[#0d80bf]/30 dark:hover:text-[#0d80bf]/30 lg:px-6;
   }
-  
+
   .logo-socials {
-    @apply w-7 h-7 bg-transparent text-zinc-500 hover:bg-zinc-50 rounded-lg
+    @apply h-7 w-7 rounded-lg bg-transparent text-zinc-500 hover:bg-zinc-50;
   }
 
   .container-socials {
-    @apply xl:mb-0 md:mb-0 mb-1 xl:mr-2 md:mr-2
+    @apply mb-1 md:mb-0 md:mr-2 xl:mb-0 xl:mr-2;
   }
   .title-section {
-    @apply absolute top-14 text-xl uppercase text-zinc-900 dark:text-zinc-100 tracking-[15px]
+    @apply absolute top-14 text-xl uppercase tracking-[15px] text-zinc-900 dark:text-zinc-100 md:text-2xl;
   }
 
   .img-techs {
-    @apply h-10 w-10 rounded-full
+    @apply h-10 w-10 rounded-full;
   }
 
   .contact-input {
-    @apply outline-none bg-zinc-300/10 rounded-md border-b px-6 py-4 border-zinc-400 text-gray-500 placeholder-gray-500 transition-all focus:border-zinc-100/80 focus:text-gray-300 hover:bg-zinc-300/20 
+    @apply rounded-md border-b border-zinc-400 bg-zinc-300/10 px-6 py-4 text-gray-500 placeholder-gray-500 outline-none transition-all focus:border-zinc-100/80 focus:text-gray-300 hover:bg-zinc-300/20;
   }
-
-  
-
 }
