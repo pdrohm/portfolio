@@ -14,8 +14,6 @@ export default function Header({}: Props) {
   const [width] = useWindowSize();
   const isSmallScreen = width <= 700;
 
-  console.log("width", width);
-
   return (
     <header className="sticky top-0 z-50 flex h-24 w-full flex-row items-center  justify-evenly bg-backgroundLight dark:bg-backgroundDark dark:text-zinc-200">
       <a href="#home">

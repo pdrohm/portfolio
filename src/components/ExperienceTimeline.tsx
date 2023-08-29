@@ -16,8 +16,6 @@ export default function ExperienceTimeline() {
   const { isEnglish } = useLanguage();
   const { isDarkMode } = useTheme();
 
-  console.log("isDarkMode", isDarkMode);
-
   const title = isEnglish
     ? ExperienceText.mainTitle.en
     : ExperienceText.mainTitle.br;
