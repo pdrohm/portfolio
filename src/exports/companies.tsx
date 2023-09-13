@@ -45,8 +45,8 @@ export const companies: company[] = [
   {
     name: "Innova Connect Sistemas",
     role: {
-      en: "Web Developer Jr",
-      br: "Desenvolvedor Web Jr",
+      en: "Web Developer",
+      br: "Desenvolvedor Web",
     },
     technologies: ["vue", "php", "postgres", "node"],
     duration: "05/2022 - 12/2022",
@@ -67,8 +67,8 @@ export const companies: company[] = [
   {
     name: "Senai Soluções Digitais",
     role: {
-      en: "Web Developer Intern",
-      br: "Desenvolvedor Web Estagiário",
+      en: "Web Developer",
+      br: "Desenvolvedor Web",
     },
     technologies: [
       "symfony",
@@ -81,10 +81,10 @@ export const companies: company[] = [
     duration: "06/2021 - 05/2022",
     activities: {
       en: [
-        "Completed an internship in Senai, contributing to the development and planning of an internal team tool, which consisted of a Kanban board for task tracking, time management, sprint workflow and other funcionalities.",
+        "Contributing to the development and planning of an internal team tool, which consisted of a Kanban board for task tracking, time management, sprint workflow and other funcionalities.",
       ],
       br: [
-        "Realizei um estágio no time do Senai, contribuindo para o desenvolvimento e planejamento de uma ferramenta interna da equipe, que consistia em um quadro Kanban para o acompanhamento de tarefas, gestão de tempo, fluxo de trabalho em sprints e outras funcionalidades.",
+        "Contribuindo para o desenvolvimento e planejamento de uma ferramenta interna da equipe, que consistia em um quadro Kanban para o acompanhamento de tarefas, gestão de tempo, fluxo de trabalho em sprints e outras funcionalidades.",
       ],
     },
 
